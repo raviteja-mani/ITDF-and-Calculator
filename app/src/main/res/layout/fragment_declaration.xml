@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeclarationFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="top"
+       android:orientation="vertical"
+       android:layout_marginTop="30dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/Empdeclaration"
+        android:background="@color/orange"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        />
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/declaration"
+           android:layout_marginTop="20dp"
+           android:layout_marginBottom="15dp"
+           android:padding="15dp"
+           />
+
+       <RadioGroup
+           android:id="@+id/radioGroup"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:orientation="horizontal">
+
+           <RadioButton
+               android:id="@+id/radioOldTax"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="15dp"
+               android:text="Old Tax Regime" />
+
+           <RadioButton
+               android:id="@+id/radioNewTax"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="15dp"
+               android:text="New Tax Regime"
+               />
+       </RadioGroup>
+
+       <Button
+           android:id="@+id/regimeSubmit"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginTop="15dp"
+
+           android:text="Submit"
+           android:textSize="13sp"
+           android:textStyle="bold" />
+
+       <TextView
+           android:id="@+id/declarationError"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/declarationEroor"
+           android:layout_gravity="center"
+           android:textColor="@color/red"
+           android:visibility="invisible"/>
+   </LinearLayout>
+</FrameLayout>
