@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#FF7F50</color>
     <color name="colorPrimary">#3F51B5</color>
+    <color name="filler">#D3D2DF</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="blue">#1E90FF</color>

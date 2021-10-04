@@ -9,4 +9,6 @@
     <string name="guidelines">"In the Budget 2020, the Government of India has proposed a personal income tax regime. This is optional and you can choose to follow either the existing income tax regime or the new one. \n\n To help you make the right choice,\n\n1. The following table show the tax rates as mentioned in the point. Please study the information carefully and choose the right tax regime for you.\n2. Use the Dynamic Tax Calculator in the ESS portal to calculate the tax liability of the two regimes.\n3. Refer the videos and read the FAQ's on the new budget in the Downloads section of the ESS site.\n4. After you decide on a tax regime to follow, submit the declaration of your choice on the right side of this page.\n5. Once the option is updated, you can proceed further to submit your tax declarations applicable basis your Tax Regime.\n6. If you have joined the company before 1st April 2020, and don't choose a tax regime, the existing tax regime is considered by default.\n7. If you are a new joiner in the current month, your default Regime would be the Old Regime.\n "</string>
     <string name="declarationEroor">Please Enter one option</string>
     <string name="add_word">add</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
 </resources>

@@ -42,10 +42,13 @@ HRAviewModel viewModel;
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         HRAitemsAdapter adapter=new HRAitemsAdapter();
         recyclerView.setAdapter(adapter);
+//        System.out.println("hello");
         viewModel= ViewModelProviders.of(getActivity()).get(HRAviewModel.class);
+//        adapter.setall();
        viewModel.getHRAItemAll().observe(getActivity(), words -> {
             // Update the cached copy of the words in the adapter.
             adapter.setList(words);
+
         });
 
 
@@ -62,14 +65,14 @@ HRAviewModel viewModel;
                 viewPager.setCurrentItem(2,true);
             }
         });
-        FloatingActionButton fab = (FloatingActionButton)v.findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i =new Intent(getActivity(),HRAItemActivity.class);
-                getActivity().startActivity(i);
-            }
-        });
+//        FloatingActionButton fab = (FloatingActionButton)v.findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i =new Intent(getActivity(),HRAItemActivity.class);
+//                getActivity().startActivity(i);
+//            }
+//        });
 
 
         return v;

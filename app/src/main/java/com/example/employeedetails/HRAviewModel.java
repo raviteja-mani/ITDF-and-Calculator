@@ -26,6 +26,12 @@ public class HRAviewModel extends AndroidViewModel {
     public void delete(HRAItem item){
         repository.delete(item);
     }
+    public void update(HRAItem item){
+        repository.update(item);
+    }
+//    public void deleteAll(){
+//        repository.deleteAll();
+//    }
 
 
 }

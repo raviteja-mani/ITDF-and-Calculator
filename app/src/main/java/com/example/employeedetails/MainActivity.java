@@ -118,6 +118,11 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
                 fragment=new EmployeeDetails();
                 Toast.makeText(MainActivity.this, "In Employee details",Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.home:
+                break;
+            case R.id.nav_calculator:
+                fragment=new CalculatorFragment();
+                break;
 //            case R.id.guidelines:
 //                    fragment=new GuideLinesFragment();
 //                Toast.makeText(MainActivity.this, "In general guidelines",Toast.LENGTH_SHORT).show();

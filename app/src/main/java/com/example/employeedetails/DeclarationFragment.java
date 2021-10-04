@@ -25,7 +25,7 @@ public class DeclarationFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view1= inflater.inflate(R.layout.fragment_declaration, container, false);
         RadioGroup group=(RadioGroup) view1.findViewById(R.id.radioGroup);
-System.out.println(R.id.radioOldTax);
+//System.out.println(R.id.radioOldTax);
         submit=view1.findViewById(R.id.regimeSubmit);
 
         submit.setOnClickListener(new View.OnClickListener() {
@@ -33,7 +33,7 @@ System.out.println(R.id.radioOldTax);
             public void onClick(View view) {
                 RadioButton rbt=(view1.findViewById(group.getCheckedRadioButtonId()));
                 String radio=rbt.getText().toString();
-                System.out.println(radio+"brodll");
+//                System.out.println(radio+"brodll");
                 if(radio.equals("Old Tax Regime")){
 
                     FragmentManager fragmentManager=getFragmentManager();
