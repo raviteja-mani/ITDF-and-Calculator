@@ -5,7 +5,7 @@
     android:id="@+id/employeeDetailsFrame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EmployeeDetails">
+    tools:context=".Fragments.EmployeeDetails">
 
 
 <LinearLayout
@@ -115,14 +115,14 @@
             </TableRow>
         </TableLayout>
 
-    <Button
-        android:id="@+id/nextTo"
-        android:layout_width="65dp"
-        android:layout_height="33dp"
-        android:layout_gravity="right"
-        android:text="Next"
-        android:textSize="10sp"
-        android:layout_marginTop="30dp"/>
+<!--    <Button-->
+<!--        android:id="@+id/nextTo"-->
+<!--        android:layout_width="65dp"-->
+<!--        android:layout_height="33dp"-->
+<!--        android:layout_gravity="right"-->
+<!--        android:text="Next"-->
+<!--        android:textSize="10sp"-->
+<!--        android:layout_marginTop="30dp"/>-->
 
 </LinearLayout>
 </FrameLayout>

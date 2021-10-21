@@ -3,15 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CalculatorFragment"
+    tools:context=".Fragments.CalculatorFragment"
     android:layout_marginBottom="30dp">
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-        android:layout_margin="10dp">
+    android:layout_margin="10dp">
 <!--        Gross salary-->
-    <LinearLayout
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -21,6 +21,7 @@
             android:layout_height="wrap_content"
             android:text="Gross salary :"/>
         <EditText
+            android:id="@+id/grosssalary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
@@ -28,7 +29,7 @@
             />
     </LinearLayout>
 <!--        Exeptions under Section 10 and 17-->
-    <LinearLayout
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -45,6 +46,7 @@
             >
 
             <TextView
+                android:id="@+id/exeption10Dis"
                 android:layout_width="252dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
@@ -55,6 +57,7 @@
                 android:text="0" />
 
             <Button
+                android:id="@+id/execption10but"
                 android:layout_width="70dp"
                 android:layout_height="40dp"
                 android:layout_alignParentEnd="true"
@@ -77,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:text="Professional Tax :"/>
             <TextView
+                android:id="@+id/professTax"
                 android:layout_width="252dp"
                 android:background="@color/filler"
                 android:layout_height="wrap_content"
@@ -123,6 +127,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/incomefromprevDis"
                     android:layout_width="252dp"
                     android:layout_height="47dp"
                     android:layout_marginStart="3dp"
@@ -134,6 +139,7 @@
                     android:text="0" />
 
                 <Button
+                    android:id="@+id/incomefromprevbut"
                     android:layout_width="70dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
@@ -162,17 +168,19 @@
                 >
 
                 <TextView
+                    android:id="@+id/incomefromhousDis"
                     android:layout_width="252dp"
-                    android:background="@color/filler"
                     android:layout_height="47dp"
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="3dp"
                     android:layout_marginEnd="3dp"
                     android:layout_marginBottom="3dp"
+                    android:background="@color/filler"
                     android:padding="10dp"
                     android:text="0" />
 
                 <Button
+                    android:id="@+id/incomefromhousbut"
                     android:layout_width="70dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
@@ -201,17 +209,19 @@
                 >
 
                 <TextView
+                    android:id="@+id/incomefromothdis"
                     android:layout_width="252dp"
-                    android:background="@color/filler"
                     android:layout_height="47dp"
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="3dp"
                     android:layout_marginEnd="3dp"
                     android:layout_marginBottom="3dp"
+                    android:background="@color/filler"
                     android:padding="10dp"
                     android:text="0" />
 
                 <Button
+                    android:id="@+id/incomefromothbutt"
                     android:layout_width="70dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
@@ -240,6 +250,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/incomefrom80ccdis"
                     android:layout_width="252dp"
                     android:layout_height="47dp"
                     android:layout_marginStart="3dp"
@@ -251,6 +262,7 @@
                     android:text="0" />
 
                 <Button
+                    android:id="@+id/incomefrmo80ccbutt"
                     android:layout_width="70dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
@@ -279,17 +291,19 @@
                 >
 
                 <TextView
+                    android:id="@+id/deductChapterDis"
                     android:layout_width="252dp"
-                    android:background="@color/filler"
                     android:layout_height="47dp"
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="3dp"
                     android:layout_marginEnd="3dp"
                     android:layout_marginBottom="3dp"
+                    android:background="@color/filler"
                     android:padding="10dp"
                     android:text="0" />
 
                 <Button
+                    android:id="@+id/deductChapterbutt"
                     android:layout_width="70dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"

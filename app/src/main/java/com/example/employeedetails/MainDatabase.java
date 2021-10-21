@@ -8,24 +8,28 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+import com.example.employeedetails.ModalClasses.HRAItem;
+import com.example.employeedetails.ModalClasses.HouseProperty;
+import com.example.employeedetails.ModalClasses.PESclass;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(version=3,entities = {HRAItem.class},exportSchema = false)
+@Database(version=4,entities = {HRAItem.class, PESclass.class,HouseProperty.class},exportSchema = false)
 public abstract class MainDatabase extends RoomDatabase {
 
     public abstract HRADao hradao();
-
+    public abstract ICalculatorDao iCalculatorDao();
 
     private static volatile MainDatabase INSTANCE;
-    private static final int NUMBER_OF_THREADS = 4;
+    private static final int NUMBER_OF_THREADS = 7;
     static final ExecutorService databaseWriteExecutor =
             Executors.newFixedThreadPool(NUMBER_OF_THREADS);
     static MainDatabase getdatabase(final Context context){
         synchronized (MainDatabase.class) {
             if (INSTANCE == null) {
                 INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                        MainDatabase.class, "ALL_database")
+                        MainDatabase.class, "sixth_database")
                         .addCallback(sRoomDatabaseCallback)
                         .build();
             }
@@ -68,6 +72,11 @@ public abstract class MainDatabase extends RoomDatabase {
                 dao.insert(oct);
                 dao.insert(nov);
                 dao.insert(dec);
+                ICalculatorDao dao2=INSTANCE.iCalculatorDao();
+                PESclass item=new PESclass(0,0,0,0,0);
+                dao2.insert(item);
+                HouseProperty hp=new HouseProperty(0,0,0,0);
+                dao2.insertHP(hp);
             });
         }
     };

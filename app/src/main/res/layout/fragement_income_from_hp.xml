@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.IncomeFromHPFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        <TableRow android:layout_marginBottom="10dp">
+            <TextView  android:layout_height="wrap_content"
+                android:text="@string/HProw1"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="10dp">
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:padding="5dp"
+                android:text="@string/HProw2"/>
+            <EditText android:layout_width="0dp"
+                android:id="@+id/HP_selfOccupied"
+                android:layout_weight=".4"
+                android:layout_height="match_parent"
+                android:background="@color/filler"
+                android:inputType="number"
+                android:padding="5dp"
+                />
+        </TableRow>
+        <TableRow android:layout_marginBottom="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:text="@string/HProw3"
+                android:textSize="15sp"/>
+        </TableRow>
+<!--        annual Letable value.rent Recieved or Recievable-->
+        <TableRow android:layout_marginBottom="5dp"
+            >
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:text="@string/HPrerow4"
+                android:paddingLeft="15dp"
+                android:paddingVertical="5dp"
+                android:layout_gravity="center_vertical"/>
+            <EditText android:layout_width="0dp"
+                android:id="@+id/HP_a_letableVR"
+                android:layout_weight=".4"
+                android:layout_height="40dp"
+                android:background="@color/filler"
+                android:inputType="number"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"/>
+        </TableRow>
+<!--        Less: Muncipal Taxes Paid During the Year-->
+        <TableRow android:layout_marginBottom="5dp"
+            >
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:text="@string/HPrerow5"
+                android:paddingLeft="15dp"
+                android:paddingVertical="5dp"
+                android:layout_gravity="center_vertical"/>
+            <EditText android:layout_width="0dp"
+                android:id="@+id/HP_b_municipalTP"
+                android:layout_weight=".4"
+                android:layout_height="40dp"
+                android:background="@color/filler"
+                android:inputType="number"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"/>
+        </TableRow>
+<!--        Net annal Value (a-b)-->
+        <TableRow android:layout_marginBottom="5dp"
+            >
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:text="@string/HPrerow6"
+                android:paddingLeft="15dp"
+                android:paddingVertical="5dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:layout_width="0dp"
+                android:id="@+id/HP_c_netValue"
+                android:layout_weight=".4"
+                android:layout_height="40dp"
+                android:background="@color/filler"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="0"
+                android:layout_gravity="center_vertical"/>
+        </TableRow>
+<!--        Less: Deduction from Net Annual value-->
+        <TableRow android:layout_marginBottom="5dp"
+            >
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:text="@string/HPrerow7"
+                android:paddingLeft="15dp"
+                android:paddingVertical="5dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:layout_height="40dp"
+                android:background="@color/filler"
+                android:inputType="number"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:layout_gravity="center_vertical"/>
+        </TableRow>
+        <TableRow android:layout_marginBottom="5dp"
+            android:layout_marginLeft="6dp"
+            >
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:text="@string/HPrerow8"
+                android:paddingLeft="15dp"
+                android:paddingVertical="5dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:layout_width="0dp"
+                android:id="@+id/HP_deductions30perAnual"
+                android:layout_weight=".4"
+                android:layout_height="40dp"
+                android:background="@color/filler"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="0"
+                android:layout_gravity="center_vertical"/>
+        </TableRow>
+        <TableRow android:layout_marginBottom="5dp"
+            android:layout_marginLeft="6dp"
+            >
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:text="@string/HPrerow9"
+                android:paddingLeft="15dp"
+                android:paddingVertical="5dp"
+                android:layout_gravity="center_vertical"/>
+            <EditText android:layout_width="0dp"
+                android:id="@+id/HP_InterestHL"
+                android:layout_weight=".4"
+                android:layout_height="40dp"
+                android:background="@color/filler"
+                android:inputType="number"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"/>
+        </TableRow>
+        <TableRow android:layout_marginBottom="5dp"
+            >
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:text="@string/HPrerow10"
+                android:paddingLeft="15dp"
+                android:paddingVertical="5dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:layout_width="0dp"
+                android:id="@+id/HP_income_from_letoutProp"
+                android:layout_weight=".4"
+                android:layout_height="40dp"
+                android:background="@color/filler"
+                android:inputType="number"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="0"
+                android:layout_gravity="center_vertical"/>
+        </TableRow>
+        <TableRow android:layout_marginBottom="5dp"
+            >
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:text="@string/HPrerow11"
+                android:paddingLeft="10dp"
+                android:paddingVertical="5dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:layout_width="0dp"
+                android:id="@+id/HP_total_incORloss"
+                android:layout_weight=".4"
+                android:layout_height="40dp"
+                android:background="@color/filler"
+                android:text="0"
+               android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:layout_gravity="center_vertical"/>
+        </TableRow>
+    </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

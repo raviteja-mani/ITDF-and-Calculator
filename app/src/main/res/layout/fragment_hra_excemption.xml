@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HRAExcemptionFragment"
+    tools:context=".Fragments.HRAExcemptionFragment"
   >
 
 <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
@@ -26,38 +26,39 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        >-->
 
-        <Button
-            android:id="@+id/HRAnext"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
+<!--        <Button-->
+<!--            android:id="@+id/HRAnext"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_alignParentBottom="true"-->
 
-            android:layout_marginStart="322dp"
-            android:layout_marginEnd="1dp"
-            android:layout_marginBottom="-2dp"
-            android:text="Next"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints" />
-        <Button
-            android:id="@+id/HRAprevious"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
+<!--            android:layout_marginStart="322dp"-->
+<!--            android:layout_marginEnd="1dp"-->
+<!--            android:layout_marginBottom="-2dp"-->
+<!--            android:text="Next"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            tools:ignore="MissingConstraints" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/HRAprevious"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="40dp"-->
 
 
-            android:layout_marginEnd="297dp"
-            android:layout_marginBottom="-3dp"
-            android:gravity="center_horizontal"
-            android:text="previous"
-            tools:ignore="MissingConstraints" />
+<!--            android:layout_marginEnd="297dp"-->
+<!--            android:layout_marginBottom="-3dp"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:text="previous"-->
+<!--            tools:ignore="MissingConstraints" />-->
 
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

@@ -11,4 +11,44 @@
     <string name="add_word">add</string>
     <string name="profile">Profile</string>
     <string name="home">Home</string>
+    <string name="PESrow1">1) Gross Salary Before exeption</string>
+    <string name="PEStitle">Income From Previous employer</string>
+    <string name="PESrow2">2) Exeption under section 10 and 17</string>
+    <string name="PESrow3">3) Proffessional Tax</string>
+    <string name="PESrow4">4) Provident fund</string>
+    <string name="PESrow5">5) Income Tax</string>
+    <string name="HProw1">Income from House Property</string>
+    <string name="HProw2">1) Income from self occupied property</string>
+    <string name="HProw3">Income from Let-Out Property</string>
+    <string name="HProw4">"a) Annual Letable Value/Rent "</string>
+    <string name="HPrerow4">a) Annual Letable Value/Rent Received or Receivable</string>
+    <string name="HPrerow5">b)   Less: Muncipal Taxes Paid During the Year</string>
+    <string name="HPrerow6">c) Net Annual Value (a-b)</string>
+    <string name="HPrerow7">d) Less : Deductions from Net Annual Value</string>
+    <string name="HPrerow8">1) Standart Deduction @30% of Net Annual Value</string>
+    <string name="HPrerow9">2) Interest on Housing Loan</string>
+    <string name="HPrerow10">e) Income / Loss from Let-Out Property "</string>
+    <string name="HPrerow11">Total Income / Loss from House Property</string>
+    <string name="tax_slabs">Tax Slabs</string>
+    <string name="newRegime">New Tax Regime</string>
+
+    <string name="table1_column1">Income Slabs</string>
+    <string name="table1_column2">Tax Rates</string>
+    <string name="table1_row1_col2">where the total income does not exceed Rs 2,50,000/-</string>
+    <string name="table1_row1_col3">NIL</string>
+    <string name="table1_row2_col2">where the total income exceed Rs 2,50,000/ but does not exceed Rs 5,00,000/-</string>
+    <string name="table1_row2_col3"><![CDATA[5% of the amount by which the total income exceeds Rs.2,50,000/- Rebate: maximum of Rs.12500/- where total income <= Rs.5,00,000/-]]></string>
+    <string name="table1_row3_col2">where the total income exceed Rs 5,00,000/- but does not exceed Rs 10,00,000/-</string>
+    <string name="table1_row3_col3">Rs.12,500/- + 20% of the amount by which the total income exceeds Rs.5,00,000/-</string>
+    <string name="table1_row4_col3">where the total income exceed Rs 10,00,000/-</string>
+    <string name="table1_row5_col2">Rs.112,500/- + 30% of the amount by which the total income exceeds Rs.10,00,000/-</string>
+    <string name="table2_row1_col2">where the total income exceed Rs.50,00,000/- but does not exceed Rs.10,00,00,00/-</string>
+    <string name="table2_row1_col3">10% of the Income tax or 70% of (taxable income - Rs.50,00,000), whichever is less.</string>
+    <string name="table2_row2_col2">"where the total income exceed Rs.10,00,00,00/- but does not exceed Rs.20,00,00,00/- "</string>
+    <string name="table2_row2_col3">15% of the Income tax or 70% of (taxable income - Rs.10,00,00,00) added with surcharges upto Rs.10,00,00,00 whichever is less.</string>
+    <string name="table2_row3_col2">where the total income exceed Rs.20,00,00,00/- but does not exceed Rs.50,00,00,00/-</string>
+    <string name="table2_row3_col3">25% of the Income tax or 70% of (taxable income - Rs.20,00,00,00) added with surcharges upto Rs.20,00,00,00 whichever is less.</string>
+    <string name="table2_row4_col3">where the total income exceed Rs.50,00,00,00/-</string>
+    <string name="table2_row5_col2">37% of the Income tax or 70% of (taxable income - Rs.50,00,00,00) added with surcharges upto Rs.50,00,00,00 whichever is less.</string>
+    <string name="logout">Logout</string>
 </resources>

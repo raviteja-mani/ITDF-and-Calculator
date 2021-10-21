@@ -11,22 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmployeeDetails">
+
+<!--        <activity-->
+<!--            android:name=".Activities.IncomeFromPESActivity"-->
+<!--            android:exported="true" />-->
+<!--        <activity-->
+<!--            android:name=".Activities.HomeActivity"-->
+<!--            android:exported="true" />-->
         <activity
-            android:name=".HomeActivity"
-            android:exported="true" />
-        <activity
-            android:name=".HRADisplayActivity"
-            android:exported="true" />
-        <activity
-            android:name=".HRAItemActivity"
+            android:name=".Activities.Login_page"
             android:exported="true"
             android:theme="@style/Theme.EmployeeLogin" />
         <activity
-            android:name=".Login_page"
-            android:exported="true"
-            android:theme="@style/Theme.EmployeeLogin" />
-        <activity
-            android:name=".Splash_screen"
+            android:name=".Activities.Splash_screen"
             android:exported="true"
             android:theme="@style/Theme.SplashScreen">
             <intent-filter>
@@ -36,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true" />
     </application>
 
