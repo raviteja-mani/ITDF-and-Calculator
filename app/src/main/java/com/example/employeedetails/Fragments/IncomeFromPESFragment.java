@@ -29,7 +29,7 @@ EditText PESrow4;
 EditText PESrow5;
 Button savebtn;
 //int SELECT_PICTURE = 200;
-    ImageView IVPreviewImage;
+//    ImageView IVPreviewImage;
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
@@ -120,10 +120,8 @@ Button savebtn;
         Bundle intent=getArguments();
 
         PESclass item=(PESclass) intent.getSerializable("PESitem");
-//        if(item==null)
-//            System.out.println("kdjhkdkjdhfksjhfkjsdhfjd");
-//        System.out.println(item.getIncTax());
-        IVPreviewImage = v.findViewById(R.id.IVPreviewImage);
+
+//        IVPreviewImage = v.findViewById(R.id.IVPreviewImage);
         PESrow1=v.findViewById(R.id.PESrow1);
         PESrow2=v.findViewById(R.id.PESrow2);
         PESrow3=v.findViewById(R.id.PESrow3);
@@ -144,7 +142,7 @@ Button savebtn;
                 item.setIncTax((int)Integer.parseInt(String.valueOf(PESrow3.getText())));
                 item.setProvfund((int)Integer.parseInt(String.valueOf(PESrow4.getText())));
                 item.setIncTax((int)Integer.parseInt(String.valueOf(PESrow5.getText())));
-//                viewmodel.queryRepos();
+
                 viewmodel.update(item);
 //                finish();
 //                imageChooser();

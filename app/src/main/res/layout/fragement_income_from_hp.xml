@@ -29,14 +29,23 @@
                 android:layout_weight=".6"
                 android:padding="5dp"
                 android:text="@string/HProw2"/>
-            <EditText android:layout_width="0dp"
+<!--            <EditText android:layout_width="0dp"-->
+<!--                -->
+<!--              -->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@color/filler"-->
+<!--                android:inputType="number"-->
+<!--                android:padding="5dp"-->
+<!--                />-->
+            <EditText
                 android:id="@+id/HP_selfOccupied"
                 android:layout_weight=".4"
-                android:layout_height="match_parent"
-                android:background="@color/filler"
-                android:inputType="number"
+                android:layout_width="0px"
                 android:padding="5dp"
-                />
+                android:focusable="false"
+                android:background="@drawable/edittext_border"
+                android:layout_gravity="center"
+                android:layout_height="35dp" />
         </TableRow>
         <TableRow android:layout_marginBottom="5dp">
             <TextView
@@ -56,14 +65,24 @@
                 android:paddingLeft="15dp"
                 android:paddingVertical="5dp"
                 android:layout_gravity="center_vertical"/>
-            <EditText android:layout_width="0dp"
+<!--            <EditText android:layout_width="0dp"-->
+<!--                -->
+<!--              -->
+<!--                android:layout_height="40dp"-->
+<!--                android:background="@color/filler"-->
+<!--                -->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:padding="5dp"/>-->
+            <EditText
                 android:id="@+id/HP_a_letableVR"
                 android:layout_weight=".4"
-                android:layout_height="40dp"
-                android:background="@color/filler"
+                android:layout_width="0px"
+                android:padding="5dp"
+                android:focusable="false"
                 android:inputType="number"
-                android:layout_gravity="center_vertical"
-                android:padding="5dp"/>
+                android:background="@drawable/edittext_border"
+                android:layout_gravity="center"
+                android:layout_height="35dp" />
         </TableRow>
 <!--        Less: Muncipal Taxes Paid During the Year-->
         <TableRow android:layout_marginBottom="5dp"
@@ -75,14 +94,16 @@
                 android:paddingLeft="15dp"
                 android:paddingVertical="5dp"
                 android:layout_gravity="center_vertical"/>
-            <EditText android:layout_width="0dp"
+            <EditText
                 android:id="@+id/HP_b_municipalTP"
                 android:layout_weight=".4"
-                android:layout_height="40dp"
-                android:background="@color/filler"
+                android:layout_width="0px"
+                android:padding="5dp"
+                android:focusable="false"
                 android:inputType="number"
-                android:layout_gravity="center_vertical"
-                android:padding="5dp"/>
+                android:background="@drawable/edittext_border"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />
         </TableRow>
 <!--        Net annal Value (a-b)-->
         <TableRow android:layout_marginBottom="5dp"
@@ -98,7 +119,7 @@
                 android:id="@+id/HP_c_netValue"
                 android:layout_weight=".4"
                 android:layout_height="40dp"
-                android:background="@color/filler"
+                android:background="@drawable/edittext_border"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
                 android:text="0"
@@ -116,7 +137,7 @@
                 android:layout_gravity="center_vertical"/>
             <TextView android:layout_width="0dp"
                 android:layout_weight=".4"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:background="@color/filler"
                 android:inputType="number"
                 android:gravity="center_vertical"
@@ -138,7 +159,7 @@
                 android:id="@+id/HP_deductions30perAnual"
                 android:layout_weight=".4"
                 android:layout_height="40dp"
-                android:background="@color/filler"
+                android:background="@drawable/edittext_border"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
                 android:text="0"
@@ -154,14 +175,23 @@
                 android:paddingLeft="15dp"
                 android:paddingVertical="5dp"
                 android:layout_gravity="center_vertical"/>
-            <EditText android:layout_width="0dp"
+<!--            <EditText android:layout_width="0dp"-->
+<!--                android:id="@+id/HP_InterestHL"-->
+<!--                android:layout_weight=".4"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:background="@color/filler"-->
+<!--                android:inputType="number"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:padding="5dp"/>-->
+            <EditText
                 android:id="@+id/HP_InterestHL"
                 android:layout_weight=".4"
-                android:layout_height="40dp"
-                android:background="@color/filler"
-                android:inputType="number"
-                android:layout_gravity="center_vertical"
-                android:padding="5dp"/>
+                android:layout_width="0px"
+                android:padding="5dp"
+                android:focusable="false"
+                android:background="@drawable/edittext_border"
+                android:layout_gravity="center"
+                android:layout_height="35dp" />
         </TableRow>
         <TableRow android:layout_marginBottom="5dp"
             >
@@ -175,34 +205,40 @@
             <TextView android:layout_width="0dp"
                 android:id="@+id/HP_income_from_letoutProp"
                 android:layout_weight=".4"
-                android:layout_height="40dp"
-                android:background="@color/filler"
+                android:layout_height="35dp"
+                android:background="@drawable/edittext_border"
                 android:inputType="number"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
                 android:text="0"
                 android:layout_gravity="center_vertical"/>
         </TableRow>
-        <TableRow android:layout_marginBottom="5dp"
-            >
-            <TextView android:layout_height="wrap_content"
-                android:layout_width="0dp"
-                android:layout_weight=".6"
-                android:text="@string/HPrerow11"
-                android:paddingLeft="10dp"
-                android:paddingVertical="5dp"
-                android:layout_gravity="center_vertical"/>
-            <TextView android:layout_width="0dp"
-                android:id="@+id/HP_total_incORloss"
-                android:layout_weight=".4"
-                android:layout_height="40dp"
-                android:background="@color/filler"
-                android:text="0"
-               android:gravity="center_vertical"
-                android:paddingLeft="15dp"
-                android:layout_gravity="center_vertical"/>
-        </TableRow>
+                                                                                                                                                                                                                                                                                                                                                                <TableRow android:layout_marginBottom="5dp"
+                                                                                                                                                                                                                                                                                                                                                                    >
+                                                                                                                                                                                                                                                                                                                                                                    <TextView android:layout_height="wrap_content"
+                                                                                                                                                                                                                                                                                                                                                                        android:layout_width="0dp"
+                                                                                                                                                                                                                                                                                                                                                                        android:layout_weight=".6"
+                                                                                                                                                                                                                                                                                                                                                                        android:text="@string/HPrerow11"
+                                                                                                                                                                                                                                                                                                                                                                        android:paddingLeft="10dp"
+                                                                                                                                                                                                                                                                                                                                                                        android:paddingVertical="5dp"
+                                                                                                                                                                                                                                                                                                                                                                        android:layout_gravity="center_vertical"/>
+                                                                                                                                                                                                                                                                                                                                                                    <TextView android:layout_width="0dp"
+                                                                                                                                                                                                                                                                                                                                                                        android:id="@+id/HP_total_incORloss"
+                                                                                                                                                                                                                                                                                                                                                                        android:layout_weight=".4"
+                                                                                                                                                                                                                                                                                                                                                                        android:layout_height="35dp"
+                                                                                                                                                                                                                                                                                                                                                                        android:background="@drawable/edittext_border"
+                                                                                                                                                                                                                                                                                                                                                                        android:text="0"
+                                                                                                                                                                                                                                                                                                                                                                       android:gravity="center_vertical"
+                                                                                                                                                                                                                                                                                                                                                                        android:paddingLeft="15dp"
+                                                                                                                                                                                                                                                                                                                                                                        android:layout_gravity="center_vertical"/>
+                                                                                                                                                                                                                                                                                                                                                                </TableRow>
     </TableLayout>
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--        </LinearLayout>-->
     </ScrollView>
 
 </LinearLayout>

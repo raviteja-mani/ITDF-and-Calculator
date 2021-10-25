@@ -18,6 +18,7 @@ public class GuideLinesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        getActivity().setTitle("Tax Declaration Form");
         View v= inflater.inflate(R.layout.fragment_guide_lines, container, false);
         Button btn=(Button) v.findViewById(R.id.nextDeclaration);
         btn.setOnClickListener(new View.OnClickListener() {

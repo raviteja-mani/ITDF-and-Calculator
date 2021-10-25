@@ -12,7 +12,7 @@
     <string name="profile">Profile</string>
     <string name="home">Home</string>
     <string name="PESrow1">1) Gross Salary Before exeption</string>
-    <string name="PEStitle">Income From Previous employer</string>
+    <string name="PEStitle">Income From Previous Employer</string>
     <string name="PESrow2">2) Exeption under section 10 and 17</string>
     <string name="PESrow3">3) Proffessional Tax</string>
     <string name="PESrow4">4) Provident fund</string>
@@ -51,4 +51,9 @@
     <string name="table2_row4_col3">where the total income exceed Rs.50,00,00,00/-</string>
     <string name="table2_row5_col2">37% of the Income tax or 70% of (taxable income - Rs.50,00,00,00) added with surcharges upto Rs.50,00,00,00 whichever is less.</string>
     <string name="logout">Logout</string>
+    <string name="table3_row1">Income From Other Sources</string>
+    <string name="table3_row2_col1">Interest on savings (if exceeds Rs.10,000)/ other Interest / commission / etc</string>
+    <string name="table3_row3_col1">Income from other sources</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
 </resources>

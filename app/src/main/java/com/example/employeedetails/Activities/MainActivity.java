@@ -8,6 +8,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -38,10 +39,9 @@ public class MainActivity extends AppCompatActivity   implements NavigationView.
         setContentView(R.layout.activity_main);
 //        Log.d(TAG, String.valueOf(R.string.close));
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setLogo(R.drawable.stohrm_logo);
+//        toolbar.setLogo(R.drawable.stohrm_logo);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(null);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
 fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frameLayoutContainer,new EmployeeDetails()).commit();
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -60,15 +60,6 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
 
         navigationView = (NavigationView)findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-//        nextToGuideline=findViewById(R.id.nextToguidelines);
-//        nextToGuideline.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View view) {
-//                //fragmentManager.beginTransaction().add(R.layout.fragment_employee_details,guideLinesFragment).commit();
-//            }
-//        });
-
 
     }
 
@@ -85,16 +76,12 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.slabs, menu);
         return true;
     }
 
    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-       // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-       // as you specify a parent activity in AndroidManifest.xml.
    int id = item.getItemId();
        Fragment fragment=null;
        switch(id)
@@ -106,7 +93,7 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
                fragment =new NewTaxSlabsFragment();
                break;
        }
-//       DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
 
        fragmentManager.beginTransaction().addToBackStack("First").replace(R.id.frameLayoutContainer,fragment).commit();
        item.setChecked(true);
@@ -135,17 +122,11 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
             case R.id.nav_calculator:
                 fragment=new CalculatorFragment();
                 break;
-//            case R.id.guidelines:
-//                    fragment=new GuideLinesFragment();
-//                Toast.makeText(MainActivity.this, "In general guidelines",Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.nav_declaration:
-//                fragment=new DeclarationFragment();
-//                Toast.makeText(MainActivity.this,"In Declaration page",Toast.LENGTH_SHORT).show();
         }
-//       DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-
-        fragmentManager.beginTransaction().addToBackStack("First").replace(R.id.frameLayoutContainer,fragment).commit();
+        fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        FragmentTransaction transaction=fragmentManager.beginTransaction();
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+        transaction.addToBackStack("First").replace(R.id.frameLayoutContainer,fragment).commit();
         item.setChecked(true);
         drawer.closeDrawer(GravityCompat.START);
 

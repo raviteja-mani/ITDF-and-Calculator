@@ -17,6 +17,7 @@ public class Login_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
+        getSupportActionBar().setTitle("Login Please");
         loginBtn=findViewById(R.id.Loginbutton);
         getSupportActionBar().setTitle(null);
         getSupportActionBar().setLogo(R.drawable.stohrm_logo);
