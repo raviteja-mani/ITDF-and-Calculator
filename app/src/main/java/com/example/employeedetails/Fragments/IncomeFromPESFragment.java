@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
@@ -28,6 +29,7 @@ EditText PESrow3;
 EditText PESrow4;
 EditText PESrow5;
 Button savebtn;
+Button cancelbtn;
 //int SELECT_PICTURE = 200;
 //    ImageView IVPreviewImage;
 //    @Override
@@ -128,6 +130,7 @@ Button savebtn;
         PESrow4=v.findViewById(R.id.PESrow4);
         PESrow5=v.findViewById(R.id.PESrow5);
         savebtn=v.findViewById(R.id.PESsaveBtn);
+        cancelbtn=v.findViewById(R.id.PESCancel);
         PESrow1.setText(String.valueOf(item.getGsalary()));
         PESrow2.setText(String.valueOf(item.getExUSs()));
         PESrow3.setText(String.valueOf(item.getProfTax()));
@@ -146,6 +149,15 @@ Button savebtn;
                 viewmodel.update(item);
 //                finish();
 //                imageChooser();
+                FragmentManager manager=getActivity().getSupportFragmentManager();
+                manager.popBackStack();
+            }
+        });
+        cancelbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager manager=getActivity().getSupportFragmentManager();
+                manager.popBackStack();
             }
         });
         return v;

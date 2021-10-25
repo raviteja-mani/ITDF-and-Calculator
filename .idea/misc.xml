@@ -36,7 +36,7 @@
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragement_income_from_hp.xml" value="0.14" />
-        <entry key="app/src/main/res/layout/fragment_calculator.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_calculator.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_declaration.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_employee_details.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_exeption_us10.xml" value="0.1" />
@@ -72,7 +72,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.2" />
+        <option name="scale" value="0.18" />
       </ProjectState>
     </option>
   </component>

@@ -56,4 +56,8 @@
     <string name="table3_row3_col1">Income from other sources</string>
     <string name="submit">Submit</string>
     <string name="cancel">Cancel</string>
+    <string name="Tax_payable">Tax Payable</string>
+    <string name="income_Tax_payable">Income Tax Payable</string>
+    <string name="Surcharge">Surcharge</string>
+    <string name="health"><![CDATA[Health & Education Cess @ 4%]]></string>
 </resources>

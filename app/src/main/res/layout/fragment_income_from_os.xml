@@ -88,7 +88,7 @@
         tools:ignore="MissingConstraints">
 
         <Button
-            android:id="@+id/btnChangePassword"
+            android:id="@+id/btnsubmitPassword"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal"

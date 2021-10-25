@@ -160,7 +160,7 @@
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/btnCancel"
+            android:id="@+id/PESCancel"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal"

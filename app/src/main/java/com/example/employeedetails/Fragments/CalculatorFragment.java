@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.employeedetails.ModalClasses.HouseProperty;
 import com.example.employeedetails.ModalClasses.PESclass;
+import com.example.employeedetails.MySession;
 import com.example.employeedetails.ViewModels.HPviewModel;
 import com.example.employeedetails.ViewModels.PESviewModel;
 import com.example.employeedetails.R;
@@ -44,11 +45,12 @@ public class CalculatorFragment extends Fragment {
 
     HPviewModel viewmodelHP;
     HouseProperty HPitem;
-
+    MySession session;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_calculator, container, false);
+        session=new MySession(getActivity());
         getActivity().setTitle("Calculator");
         exeption10Dis = v.findViewById(R.id.exeption10Dis);
         exeption10butt = v.findViewById(R.id.execption10but);
@@ -59,18 +61,24 @@ public class CalculatorFragment extends Fragment {
         incomefromhousDis = v.findViewById(R.id.incomefromhousDis);
         incomefromhousbut = v.findViewById(R.id.incomefromhousbut);
         incomefromothbutt = v.findViewById(R.id.incomefromothbutt);
+
+        incomefromothdis=v.findViewById(R.id.incomefromothdis);
+        incomefromothdis.setText(String.valueOf(session.getTotalOtherIncome()));
         incomefromothbutt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Fragment fr=new IncomeFromOSFragment();
                 FragmentManager manager = getActivity().getSupportFragmentManager();
-                manager.beginTransaction().addToBackStack("other sources").replace(R.id.frameLayoutContainer, new IncomeFromOSFragment()).commit();
-
+                Bundle b=new Bundle();
+                b.putSerializable("other income",session.getOtherIncome());
+                fr.setArguments(b);
+                manager.beginTransaction().addToBackStack("other sources").replace(R.id.frameLayoutContainer,fr).commit();
             }
         });
         viewmodel = ViewModelProviders.of(getActivity()).get(PESviewModel.class);
         viewmodel.getPES().observe(getActivity(), data -> {
             PESitem = data;
-
+            session.setPes(PESitem);
             incomefromprevDis.setText(String.valueOf(data.getProvfund()));
 
         });
@@ -78,6 +86,7 @@ public class CalculatorFragment extends Fragment {
         viewmodelHP = ViewModelProviders.of(getActivity()).get(HPviewModel.class);
         viewmodelHP.getPES().observe(getActivity(), data -> {
             HPitem = data;
+            session.setHouseProperty(HPitem);
             incomefromhousDis.setText(String.valueOf(data.getTotalIncomefromHP()));
         });
         incomefromhousbut.setOnClickListener(new View.OnClickListener() {
