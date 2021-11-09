@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -94,11 +95,9 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
                break;
        }
 
-
        fragmentManager.beginTransaction().addToBackStack("First").replace(R.id.frameLayoutContainer,fragment).commit();
        item.setChecked(true);
        drawer.closeDrawer(GravityCompat.START);
-
        return super.onOptionsItemSelected(item);
    }
 
@@ -122,6 +121,15 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
             case R.id.nav_calculator:
                 fragment=new CalculatorFragment();
                 break;
+            case R.id.settings:
+//                fragment=new Settingsfragment();
+                break;
+            case R.id.logout:
+                Intent i=new Intent(this,Login_page.class);
+                startActivity(i);
+                finish();
+                break;
+
         }
         fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         FragmentTransaction transaction=fragmentManager.beginTransaction();
@@ -129,7 +137,6 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
         transaction.addToBackStack("First").replace(R.id.frameLayoutContainer,fragment).commit();
         item.setChecked(true);
         drawer.closeDrawer(GravityCompat.START);
-
         return true;
     }
 

@@ -20,7 +20,7 @@ public class Login_page extends AppCompatActivity {
         getSupportActionBar().setTitle("Login Please");
         loginBtn=findViewById(R.id.Loginbutton);
         getSupportActionBar().setTitle(null);
-        getSupportActionBar().setLogo(R.drawable.stohrm_logo);
+//        getSupportActionBar().setLogo(R.drawable.stohrm_logo);
         loginBtn.setOnClickListener(view -> {
             Intent i = new Intent(view.getContext(), MainActivity.class);
             startActivity(i);

@@ -53,17 +53,14 @@
                 android:id="@+id/exeption10Dis"
                 android:layout_width="230dp"
                 android:layout_height="35dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
                 android:background="@drawable/edittext_border"
                 android:padding="5dp"
                 android:text="0" />
 
             <ImageView
                 android:id="@+id/execption10but"
-                android:layout_width="70dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="35dp"
                 android:layout_marginBottom="6dp"
@@ -137,18 +134,14 @@
                     android:id="@+id/incomefromprevDis"
                     android:layout_width="230dp"
                     android:layout_height="35dp"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginBottom="3dp"
                     android:background="@drawable/edittext_border"
                     android:padding="10dp"
                     android:text="0" />
 
                 <ImageView
                     android:id="@+id/incomefromprevbut"
-                    android:layout_width="70dp"
-                    android:layout_height="40dp"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="35dp"
                     android:layout_marginBottom="0dp"
@@ -179,18 +172,15 @@
                     android:id="@+id/incomefromhousDis"
                     android:layout_width="230dp"
                     android:layout_height="35dp"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginBottom="3dp"
+
                     android:background="@drawable/edittext_border"
                     android:padding="10dp"
                     android:text="0" />
 
                 <ImageView
                     android:id="@+id/incomefromhousbut"
-                    android:layout_width="70dp"
-                    android:layout_height="40dp"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="35dp"
                     android:layout_marginBottom="0dp"
@@ -221,18 +211,14 @@
                     android:id="@+id/incomefromothdis"
                     android:layout_width="230dp"
                     android:layout_height="35dp"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginBottom="3dp"
                     android:background="@drawable/edittext_border"
                     android:padding="10dp"
                     android:text="0" />
 
                 <ImageView
                     android:id="@+id/incomefromothbutt"
-                    android:layout_width="70dp"
-                    android:layout_height="40dp"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="35dp"
                     android:layout_marginBottom="0dp"
@@ -263,18 +249,15 @@
                     android:id="@+id/incomefrom80ccdis"
                     android:layout_width="230dp"
                     android:layout_height="35dp"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginBottom="3dp"
+
                     android:background="@drawable/edittext_border"
                     android:padding="10dp"
                     android:text="0" />
 
                 <ImageView
                     android:id="@+id/incomefrmo80ccbutt"
-                    android:layout_width="70dp"
-                    android:layout_height="40dp"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="35dp"
                     android:layout_marginBottom="0dp"
@@ -295,31 +278,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Other Deductions under chapter VI-A"/>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/deductChapterDis"
                     android:layout_width="230dp"
                     android:layout_height="35dp"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginBottom="3dp"
+                    android:layout_margin="0dp"
+
                     android:background="@drawable/edittext_border"
                     android:padding="10dp"
                     android:text="0" />
 
                 <ImageView
                     android:id="@+id/deductChapterbutt"
-                    android:layout_width="70dp"
-                    android:layout_height="40dp"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="0dp"
                     android:layout_marginBottom="0dp"
+
                     android:layout_toEndOf="@+id/deductChapterDis"
                     android:src="@drawable/filler"
                     android:text="fill" />

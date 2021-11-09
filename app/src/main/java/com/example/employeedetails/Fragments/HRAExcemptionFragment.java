@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -37,6 +38,7 @@ HRAviewModel viewModel;
         //displaying all HRAItems
         recyclerView=v.findViewById(R.id.HRArecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.addItemDecoration(new DividerItemDecoration(requireContext(),DividerItemDecoration.VERTICAL));
         HRAitemsAdapter adapter=new HRAitemsAdapter(getContext());
         recyclerView.setAdapter(adapter);
 //        System.out.println("hello");

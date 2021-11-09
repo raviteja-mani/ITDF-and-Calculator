@@ -13,12 +13,7 @@ import com.example.employeedetails.R;
 
 public class ExeptionUS10Fragment extends Fragment {
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_exeption_us10);
-//
-//    }
+
 
     @Nullable
     @Override
@@ -28,9 +23,4 @@ public class ExeptionUS10Fragment extends Fragment {
         return v;
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        super.onBackPressed();
-//        finish();
-//    }
 }

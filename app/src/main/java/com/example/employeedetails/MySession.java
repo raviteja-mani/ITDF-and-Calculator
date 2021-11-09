@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.example.employeedetails.ModalClasses.DeductionType;
+import com.example.employeedetails.ModalClasses.Generalfunctions;
 import com.example.employeedetails.ModalClasses.HRAItem;
 import com.example.employeedetails.ModalClasses.HouseProperty;
 import com.example.employeedetails.ModalClasses.Otherimcome;
@@ -14,6 +16,7 @@ import java.util.List;
 
 public class MySession {
     List<HRAItem> listOfHRA=new ArrayList<>();
+    ArrayList<DeductionType> deductions;
     Otherimcome otherIncome=null;
     PESclass pes=null;
     HouseProperty houseProperty=null;
@@ -23,6 +26,9 @@ public class MySession {
         otherIncome=new Otherimcome();
         otherIncome.setInterestOnSavings(sharedprefs.getInt("Interest on Savings",0));
         otherIncome.setOtherIncome(sharedprefs.getInt("other Income",0));
+//        deductionSharedprefs=context.getSharedPreferences("deductions",Activity.MODE_PRIVATE);
+        Generalfunctions funcs=new Generalfunctions(context);
+        deductions=funcs.getDeductionArray();
     }
     public MySession(List<HRAItem> listOfHRA, Otherimcome otherIncome, PESclass pes, HouseProperty houseProperty) {
         this.listOfHRA = listOfHRA;
@@ -30,8 +36,6 @@ public class MySession {
         this.pes = pes;
         this.houseProperty = houseProperty;
     }
-
-
 
     public void setListOfHRA(List<HRAItem> listOfHRA) {
         this.listOfHRA = listOfHRA;
@@ -72,5 +76,14 @@ public class MySession {
     public int getTotalOtherIncome(){
         Otherimcome o=getOtherIncome();
         return o.getOtherIncome()+o.getInterestOnSavings();
+    }
+    public int getTotalDeductions(){
+        int total=0;
+        for(DeductionType d:deductions){
+            total+=d.getDeclared();
+        }
+        if(total>150000)
+        return 150000;
+        else return total;
     }
 }

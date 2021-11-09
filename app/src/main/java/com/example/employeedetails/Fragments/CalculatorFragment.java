@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.employeedetails.Adapters.DeductionsAdapter;
 import com.example.employeedetails.ModalClasses.HouseProperty;
 import com.example.employeedetails.ModalClasses.PESclass;
 import com.example.employeedetails.MySession;
@@ -46,6 +47,7 @@ public class CalculatorFragment extends Fragment {
     HPviewModel viewmodelHP;
     HouseProperty HPitem;
     MySession session;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -63,6 +65,18 @@ public class CalculatorFragment extends Fragment {
         incomefromothbutt = v.findViewById(R.id.incomefromothbutt);
 
         incomefromothdis=v.findViewById(R.id.incomefromothdis);
+
+        incomefrom80ccdis=v.findViewById(R.id.incomefrom80ccdis);
+        incomefrmo80ccbutt=v.findViewById(R.id.incomefrmo80ccbutt);
+        incomefrom80ccdis.setText(String.valueOf(session.getTotalDeductions()));
+        incomefrmo80ccbutt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DeductionsFragment fragment=new DeductionsFragment();
+                FragmentManager manager=getActivity().getSupportFragmentManager();
+                manager.beginTransaction().addToBackStack("deductions").replace(R.id.frameLayoutContainer,fragment).commit();
+            }
+        });
         incomefromothdis.setText(String.valueOf(session.getTotalOtherIncome()));
         incomefromothbutt.setOnClickListener(new View.OnClickListener() {
             @Override

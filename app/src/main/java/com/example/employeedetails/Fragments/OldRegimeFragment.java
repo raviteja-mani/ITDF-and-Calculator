@@ -61,7 +61,6 @@ private ViewPager viewPager;
         public Fragment getItem(int position) {
             return fragments.get(position);
         }
-
         @Override
         public int getCount() {
             return fragments.size();
