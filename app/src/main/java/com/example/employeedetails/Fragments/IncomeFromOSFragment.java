@@ -32,7 +32,7 @@ public class IncomeFromOSFragment extends Fragment {
         otherSourses=v.findViewById(R.id.OSrow2);
         submit=v.findViewById(R.id.btnsubmitPassword);
         cancel=v.findViewById(R.id.btnCancel);
-        SharedPreferences shr=getActivity().getSharedPreferences("otherIncome",Activity.MODE_PRIVATE);
+        SharedPreferences shr=getActivity().getSharedPreferences("employeeDetails",Activity.MODE_PRIVATE);
         SharedPreferences.Editor prefsEditor=shr.edit();
         interest.setText(String.valueOf(otherincome.getInterestOnSavings()));
         otherSourses.setText(String.valueOf(otherincome.getOtherIncome()));
@@ -42,8 +42,8 @@ public class IncomeFromOSFragment extends Fragment {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                prefsEditor.putInt("Interest on Savings",Integer.parseInt(String.valueOf(interest.getText()))).commit();
-                prefsEditor.putInt("other Income",Integer.parseInt(String.valueOf(otherSourses.getText()))).commit();
+                prefsEditor.putInt("InterestOnSavings",Integer.parseInt(String.valueOf(interest.getText()))).commit();
+                prefsEditor.putInt("otherIncome",Integer.parseInt(String.valueOf(otherSourses.getText()))).commit();
                 Fragment fragment=new CalculatorFragment();
                 manager.beginTransaction().replace(R.id.frameLayoutContainer,fragment).commit();
             }

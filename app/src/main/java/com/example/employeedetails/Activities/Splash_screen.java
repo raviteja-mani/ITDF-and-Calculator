@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 
+import com.example.employeedetails.AppSession;
 import com.example.employeedetails.R;
 
 public class Splash_screen extends AppCompatActivity {
@@ -19,9 +20,20 @@ public class Splash_screen extends AppCompatActivity {
         image=findViewById(R.id.imageView);
 //        progress=findViewById(R.id.progressBar);
         new Handler().postDelayed((Runnable) () -> {
-        Intent i = new Intent(this, Login_page.class);
-        startActivity(i);
-        finish();
+            AppSession session=new AppSession(this);
+            if(session.getUserName()!=null)
+            {
+                Intent i = new Intent(this, MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+            else {
+                Intent i = new Intent(this, Login_page.class);
+                startActivity(i);
+                finish();
+            }
         },5000);    
     }
+
+
 }

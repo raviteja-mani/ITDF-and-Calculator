@@ -24,7 +24,6 @@ import java.util.ArrayList;
 
 public class DeductionsAdapter extends RecyclerView.Adapter<DeductionsAdapter.RecyclerDeductionHolder> {
     ArrayList<DeductionType> deductions;
-//    private int position;
     Generalfunctions generalfunctions;
     Context context;
     public DeductionsAdapter(Context context) {
@@ -45,7 +44,6 @@ public class DeductionsAdapter extends RecyclerView.Adapter<DeductionsAdapter.Re
     public void onBindViewHolder(@NonNull DeductionsAdapter.RecyclerDeductionHolder holder, @SuppressLint("RecyclerView") int position) {
 
         DeductionType d=deductions.get(position);
-//    holder.txelegible.setText(String.valueOf(d.getEligible()));
     holder.ed.setText(String.valueOf(d.getDeclared()));
     holder.tv.setText(d.getText());
     holder.ed.addTextChangedListener(new TextWatcher() {
@@ -61,16 +59,15 @@ public class DeductionsAdapter extends RecyclerView.Adapter<DeductionsAdapter.Re
 
         @Override
         public void afterTextChanged(Editable s) {
-//            int i=0;
+
         if(String.valueOf(s).equals("")){
-//            holder.txelegible.setText("0");
+
             deductions.get(position).setDeclared(0);
-//            deductions.get(position).setEligible(0);
+
         }
         else{
             int i=Integer.parseInt(String.valueOf(s));
-//            int max=150000;
-//            int total=0;
+
             deductions.get(position).setDeclared(i);
 //            for(DeductionType dd: deductions){
 //                if(total==max) {

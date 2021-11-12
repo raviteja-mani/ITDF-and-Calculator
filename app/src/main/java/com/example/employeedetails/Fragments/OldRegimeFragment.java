@@ -35,7 +35,7 @@ private ViewPager viewPager;
         viewPager = view.findViewById(R.id.viewpager);
         tabLayout.setupWithViewPager(viewPager);
         ViewPagerAdapter viewPagerAdapter=new ViewPagerAdapter(getChildFragmentManager(),0);
-        viewPagerAdapter.addFragment(oldregimeGiudelinesFragment,"Guidelines");
+//        viewPagerAdapter.addFragment(oldregimeGiudelinesFragment,"Guidelines");
         viewPagerAdapter.addFragment(new HRAExcemptionFragment(),"HRA Excemption");
         viewPagerAdapter.addFragment(new IncomeFragment(),"Income");
         viewPagerAdapter.addFragment(new InvestmentsFragment(),"Investments");

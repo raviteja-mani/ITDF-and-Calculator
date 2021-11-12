@@ -20,7 +20,7 @@ import com.example.employeedetails.R;
 
 public class HRADisplayFragment extends Fragment {
     Button deletebtn;
-    Button backbtn;
+//    Button backbtn;
     Button Updatebtn;
     EditText month;
     EditText name;
@@ -100,7 +100,7 @@ public class HRADisplayFragment extends Fragment {
         View v=inflater.inflate(R.layout.fragment_hradisplay, container, false);
         Bundle intent=getArguments();
         HRAItem item=(HRAItem)intent.getSerializable("HRAItem");
-        backbtn=v.findViewById(R.id.back_button);
+//        backbtn=v.findViewById(R.id.back_button);
         Updatebtn=v.findViewById(R.id.update_button);
         deletebtn=v.findViewById(R.id.deletebutton);
         month=v.findViewById(R.id.month);
@@ -118,13 +118,13 @@ public class HRADisplayFragment extends Fragment {
 
 
         viewModel= ViewModelProviders.of(this).get(HRAviewModel.class);
-        backbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                finish();
-
-            }
-        });
+//        backbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                finish();
+//
+//            }
+//        });
 
         Updatebtn.setOnClickListener(new View.OnClickListener() {
             @Override

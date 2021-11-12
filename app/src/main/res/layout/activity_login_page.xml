@@ -25,27 +25,25 @@
             android:layout_marginTop="48dp"
             android:layout_marginBottom="16dp"
             app:srcCompat="@drawable/login_page" />
-
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
+            android:layout_width="250sp"
             android:layout_height="wrap_content"
-
-            android:layout_margin="30dp"
+            android:layout_margin="10dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="30dp"
-            android:layout_marginRight="30dp"
-
-            android:hint="User Id"
+            android:layout_marginBottom="20dp"
             app:endIconMode="clear_text">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:maxLines="1"
-                app:endIconMode="clear_text"
-                android:layout_gravity="center_horizontal"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            app:endIconMode="clear_text"
+            android:hint="User ID"
+            />
         </com.google.android.material.textfield.TextInputLayout>
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password_text_input"
@@ -87,6 +85,7 @@
         </RelativeLayout>
 
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="28dp"
             android:text="Forget password"
@@ -94,5 +93,15 @@
             android:layout_marginTop="20dp"
 
             />
+
+        <TextView
+            android:id="@+id/loginerror"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please enter the developer login and password"
+            android:textColor="@color/red"
+            android:visibility="invisible"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"/>
     </LinearLayout>
 </ScrollView>

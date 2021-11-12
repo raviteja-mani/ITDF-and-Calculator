@@ -18,8 +18,9 @@ import com.example.employeedetails.R;
 public class EmployeeDetails extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-      getActivity().setTitle("My Profile");
+
         View v= inflater.inflate(R.layout.fragment_employee_details, container, false);
+        getActivity().setTitle("My Profile");
         return v;
     }
 }

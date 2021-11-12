@@ -10,136 +10,152 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="215dp"
-            android:layout_marginBottom="1dp"
-            android:text="Back" />
-        <com.google.android.material.textfield.TextInputLayout
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginHorizontal="20dp"
+           android:layout_marginBottom="15dp">
+           <TextView
+               android:layout_width="0dp"
+               android:layout_weight=".5"
+               android:layout_height="wrap_content"
+               android:textSize="18sp"
+               android:text="@string/hraDisplayMonth"
+               android:paddingRight="10dp"
+              />
+           <EditText
+               android:id="@+id/month"
+               android:layout_width="0dp"
+               android:layout_weight=".5"
+               android:layout_height="40dp"
+               android:background="@drawable/edittext_border"
+              />
+       </LinearLayout>
+<!--        LLname-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"
-            app:endIconMode="clear_text">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/month"
-                android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="15dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".5"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                android:maxLines="1"
-                app:endIconMode="clear_text"
-                android:hint="Month"
+                android:textSize="18sp"
+                android:text="@string/hraDisplayLL"
+                android:paddingRight="10dp"
                 />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="30dp"
-            app:endIconMode="clear_text">
-
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:id="@+id/LLname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:maxLines="1"
-                app:endIconMode="clear_text"
-                android:hint="LandLord Name"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_border"
+               />
+        </LinearLayout>
+<!--        LandLord Pancard ID(pancardId)-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"
-            app:endIconMode="clear_text">
-
-            <com.google.android.material.textfield.TextInputEditText
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="15dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/hraDisplayPancard"
+                android:paddingRight="6dp"
+                />
+            <EditText
                 android:id="@+id/pancardId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:maxLines="1"
-                app:endIconMode="clear_text"
-                android:hint="LandLord Pancard ID"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_border" />
+        </LinearLayout>
+<!--        City Type(locationType)-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"
-            app:endIconMode="clear_text">
-
-            <com.google.android.material.textfield.TextInputEditText
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/hraDisplayLocation"
+                android:paddingRight="3dp"/>
+            <EditText
                 android:id="@+id/locationType"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:maxLines="1"
-                app:endIconMode="clear_text"
-                android:hint="City Type"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_border"
+
                 />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
+        </LinearLayout>
+<!--        Reimberced Amount(amount)-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="30dp"
-            app:endIconMode="clear_text">
-
-            <com.google.android.material.textfield.TextInputEditText
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="15dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/hraDisplayReimbersedamount"
+                />
+            <EditText
                 android:id="@+id/amount"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:maxLines="1"
-                app:endIconMode="clear_text"
-                android:hint="Reimberced Amount"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center">
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_border"
+                android:autoSizeTextType="uniform"/>
+        </LinearLayout>
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/deletebutton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginStart="197dp"
-                android:layout_marginRight="107dp"
-                android:layout_marginBottom="1dp"
-                android:text="clear" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/update_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginStart="84dp"
-                android:layout_marginRight="215dp"
-                android:layout_marginBottom="1dp"
-                android:text="Update" />
-
-        </RelativeLayout>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
 
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/Update"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/deletebutton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

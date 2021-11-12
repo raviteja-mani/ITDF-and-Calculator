@@ -29,7 +29,7 @@ public abstract class MainDatabase extends RoomDatabase {
         synchronized (MainDatabase.class) {
             if (INSTANCE == null) {
                 INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                        MainDatabase.class, "sixth_database")
+                        MainDatabase.class, "seventh_database")
                         .addCallback(sRoomDatabaseCallback)
                         .build();
             }

@@ -2,30 +2,33 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".Fragments.CalculatorFragment"
-    android:layout_marginBottom="30dp">
+  >
+
     <LinearLayout
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_margin="10dp"
+        android:gravity="center_horizontal"
         android:layout_gravity="center_horizontal"
         >
 <!--        Gross salary-->
         <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         >
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
             android:layout_height="wrap_content"
             android:text="Gross salary :"/>
         <EditText
             android:id="@+id/grosssalary"
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="40dp"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:background="@drawable/edittext_border"
@@ -52,7 +55,7 @@
             <TextView
                 android:id="@+id/exeption10Dis"
                 android:layout_width="230dp"
-                android:layout_height="35dp"
+                android:layout_height="40dp"
                 android:background="@drawable/edittext_border"
                 android:padding="5dp"
                 android:text="0" />
@@ -74,42 +77,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:padding="5dp"
+
             >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
                 android:layout_height="wrap_content"
                 android:text="Professional Tax :"/>
+
             <TextView
                 android:id="@+id/professTax"
-                android:layout_width="230dp"
-                android:background="@drawable/edittext_border"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
                 android:layout_height="35dp"
-                android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edittext_border"
 
-                android:padding="10dp"
-                />
+                android:padding="10dp" />
         </LinearLayout>
 <!--        standard deductions-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:gravity="center_vertical"
             >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
                 android:layout_height="wrap_content"
                 android:text="Standard Deductions :"/>
-            <TextView
-                android:layout_width="230dp"
-                android:background="@drawable/edittext_border"
-                android:layout_height="35dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
 
-                android:text="50,000"
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edittext_border"
+
                 android:padding="10dp"
+                android:text="50,000"
 
                 />
         </LinearLayout>
@@ -279,7 +288,7 @@
                 android:layout_height="wrap_content"
                 android:text="Other Deductions under chapter VI-A"/>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
@@ -308,46 +317,40 @@
                     android:layout_toEndOf="@+id/deductChapterDis"
                     android:src="@drawable/filler"
                     android:text="fill" />
-            </RelativeLayout>
+            </LinearLayout>
 
         </LinearLayout>
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp"
-            android:layout_marginTop="20dp">
+            android:padding="40dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+           >
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+
                 android:orientation="horizontal"
                 android:layout_marginBottom="15dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="74dp"
-                    android:layout_marginBottom="0dp"
                     android:text="@string/Tax_payable" />
 
                 <TextView
                     android:id="@+id/taxPayable"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="right"
-
-                    android:layout_marginEnd="101dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginBottom="-1dp"
+                    android:layout_marginLeft="20dp"
                     android:text="0" />
-            </RelativeLayout>
-            <RelativeLayout
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -355,28 +358,20 @@
                 android:layout_marginBottom="15dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="74dp"
-                    android:layout_marginBottom="0dp"
                     android:text="@string/income_Tax_payable" />
 
                 <TextView
                     android:id="@+id/incomeTaxPayable"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="right"
-
-                    android:layout_marginEnd="101dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginBottom="-1dp"
+                    android:layout_marginLeft="20dp"
                     android:text="0" />
-            </RelativeLayout>
-            <RelativeLayout
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -384,56 +379,41 @@
                 android:layout_marginBottom="15dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="74dp"
-                    android:layout_marginBottom="0dp"
                     android:text="@string/Surcharge" />
 
                 <TextView
                     android:id="@+id/surcharge"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="right"
-
-                    android:layout_marginEnd="101dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginBottom="-1dp"
+                    android:layout_marginLeft="20dp"
                     android:text="0" />
-            </RelativeLayout>
-            <RelativeLayout
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:orientation="horizontal"
-                android:layout_marginBottom="15dp">
+              >
 
                 <TextView
-                    android:layout_width="150dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="74dp"
-                    android:layout_marginBottom="0dp"
+
                     android:text="@string/health" />
 
                 <TextView
                     android:id="@+id/health"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="right"
-
-                    android:layout_marginEnd="101dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginBottom="-1dp"
+                    android:layout_marginLeft="20dp"
                     android:text="0" />
-            </RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 

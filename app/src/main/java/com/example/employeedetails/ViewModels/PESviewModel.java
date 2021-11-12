@@ -11,7 +11,7 @@ import com.example.employeedetails.RepositoryPES;
 
 public class PESviewModel extends AndroidViewModel {
     private RepositoryPES repositoryPES;
-    private final LiveData<PESclass> PESitem;
+    private  LiveData<PESclass> PESitem;
 
     public PESviewModel(@NonNull Application application) {
         super(application);

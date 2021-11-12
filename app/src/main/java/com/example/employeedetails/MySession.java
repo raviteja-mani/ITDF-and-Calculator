@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.example.employeedetails.ModalClasses.DeductionType;
+import com.example.employeedetails.ModalClasses.Exemptions;
 import com.example.employeedetails.ModalClasses.Generalfunctions;
 import com.example.employeedetails.ModalClasses.HRAItem;
 import com.example.employeedetails.ModalClasses.HouseProperty;
@@ -13,7 +14,7 @@ import com.example.employeedetails.ModalClasses.PESclass;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//completely for calculator
 public class MySession {
     List<HRAItem> listOfHRA=new ArrayList<>();
     ArrayList<DeductionType> deductions;
@@ -21,14 +22,21 @@ public class MySession {
     PESclass pes=null;
     HouseProperty houseProperty=null;
     SharedPreferences sharedprefs;
+    Exemptions exemptions;
     public MySession(Context context) {
-        sharedprefs=context.getSharedPreferences("otherIncome", Activity.MODE_PRIVATE);
-        otherIncome=new Otherimcome();
-        otherIncome.setInterestOnSavings(sharedprefs.getInt("Interest on Savings",0));
-        otherIncome.setOtherIncome(sharedprefs.getInt("other Income",0));
+        sharedprefs=context.getSharedPreferences("employeeDetails", Activity.MODE_PRIVATE);
+//        otherIncome=new Otherimcome();
+//        otherIncome.setInterestOnSavings(sharedprefs.getInt("InterestOnSavings",0));
+//        otherIncome.setOtherIncome(sharedprefs.getInt("otherIncome",0));
 //        deductionSharedprefs=context.getSharedPreferences("deductions",Activity.MODE_PRIVATE);
         Generalfunctions funcs=new Generalfunctions(context);
         deductions=funcs.getDeductionArray();
+        exemptions=funcs.getExemptions();
+
+            otherIncome=new Otherimcome();
+            otherIncome.setInterestOnSavings(sharedprefs.getInt("InterestOnSavings",0));
+            otherIncome.setOtherIncome(sharedprefs.getInt("otherIncome",0));
+
     }
     public MySession(List<HRAItem> listOfHRA, Otherimcome otherIncome, PESclass pes, HouseProperty houseProperty) {
         this.listOfHRA = listOfHRA;
@@ -58,11 +66,7 @@ public class MySession {
     }
 
     public Otherimcome getOtherIncome() {
-        if(otherIncome==null){
-            otherIncome=new Otherimcome();
-            otherIncome.setInterestOnSavings(sharedprefs.getInt("Interest on Savings",0));
-            otherIncome.setOtherIncome(sharedprefs.getInt("other Income",0));
-        }
+
         return otherIncome;
     }
 
@@ -85,5 +89,8 @@ public class MySession {
         if(total>150000)
         return 150000;
         else return total;
+    }
+    public int getExemptions(){
+        return exemptions.getTotalExemptions();
     }
 }

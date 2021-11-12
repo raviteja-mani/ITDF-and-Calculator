@@ -42,7 +42,6 @@
                 android:layout_weight=".4"
                 android:layout_width="0px"
                 android:padding="5dp"
-                android:focusable="false"
                 android:background="@drawable/edittext_border"
                 android:layout_gravity="center"
                 android:layout_height="35dp" />
@@ -78,7 +77,7 @@
                 android:layout_weight=".4"
                 android:layout_width="0px"
                 android:padding="5dp"
-                android:focusable="false"
+
                 android:inputType="number"
                 android:background="@drawable/edittext_border"
                 android:layout_gravity="center"
@@ -99,7 +98,7 @@
                 android:layout_weight=".4"
                 android:layout_width="0px"
                 android:padding="5dp"
-                android:focusable="false"
+
                 android:inputType="number"
                 android:background="@drawable/edittext_border"
                 android:layout_gravity="center"
@@ -188,7 +187,7 @@
                 android:layout_weight=".4"
                 android:layout_width="0px"
                 android:padding="5dp"
-                android:focusable="false"
+
                 android:background="@drawable/edittext_border"
                 android:layout_gravity="center"
                 android:layout_height="35dp" />
@@ -213,25 +212,24 @@
                 android:text="0"
                 android:layout_gravity="center_vertical"/>
         </TableRow>
-                                                                                                                                                                                                                                                                                                                                                                <TableRow android:layout_marginBottom="5dp"
-                                                                                                                                                                                                                                                                                                                                                                    >
-                                                                                                                                                                                                                                                                                                                                                                    <TextView android:layout_height="wrap_content"
-                                                                                                                                                                                                                                                                                                                                                                        android:layout_width="0dp"
-                                                                                                                                                                                                                                                                                                                                                                        android:layout_weight=".6"
-                                                                                                                                                                                                                                                                                                                                                                        android:text="@string/HPrerow11"
-                                                                                                                                                                                                                                                                                                                                                                        android:paddingLeft="10dp"
-                                                                                                                                                                                                                                                                                                                                                                        android:paddingVertical="5dp"
-                                                                                                                                                                                                                                                                                                                                                                        android:layout_gravity="center_vertical"/>
-                                                                                                                                                                                                                                                                                                                                                                    <TextView android:layout_width="0dp"
-                                                                                                                                                                                                                                                                                                                                                                        android:id="@+id/HP_total_incORloss"
-                                                                                                                                                                                                                                                                                                                                                                        android:layout_weight=".4"
-                                                                                                                                                                                                                                                                                                                                                                        android:layout_height="35dp"
-                                                                                                                                                                                                                                                                                                                                                                        android:background="@drawable/edittext_border"
-                                                                                                                                                                                                                                                                                                                                                                        android:text="0"
-                                                                                                                                                                                                                                                                                                                                                                       android:gravity="center_vertical"
-                                                                                                                                                                                                                                                                                                                                                                        android:paddingLeft="15dp"
-                                                                                                                                                                                                                                                                                                                                                                        android:layout_gravity="center_vertical"/>
-                                                                                                                                                                                                                                                                                                                                                                </TableRow>
+        <TableRow android:layout_marginBottom="5dp">
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:text="@string/HPrerow11"
+                android:paddingLeft="10dp"
+                android:paddingVertical="5dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:layout_width="0dp"
+                android:id="@+id/HP_total_incORloss"
+                android:layout_weight=".4"
+                android:layout_height="35dp"
+                android:background="@drawable/edittext_border"
+                android:text="0"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:layout_gravity="center_vertical"/>
+        </TableRow>
     </TableLayout>
 <!--        <LinearLayout-->
 <!--            android:layout_width="match_parent"-->

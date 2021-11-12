@@ -13,4 +13,5 @@ public class SharedPreferencesOSLiveData extends SharedPreferenceLiveData<Otheri
     Otherimcome getValueFromPreferences(String key, Otherimcome defValue) {
         return null;
     }
+
 }

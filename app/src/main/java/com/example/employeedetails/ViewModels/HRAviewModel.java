@@ -1,6 +1,7 @@
 package com.example.employeedetails.ViewModels;
 
 import android.app.Application;
+import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -18,6 +19,7 @@ public class HRAviewModel extends AndroidViewModel {
         super(application);
         repository=new HRARepository(application);
         HRAall=repository.getHRAItemAll();
+//        Context context=application.getApplicationContext();
     }
     public LiveData<List<HRAItem>> getHRAItemAll(){
         return HRAall;

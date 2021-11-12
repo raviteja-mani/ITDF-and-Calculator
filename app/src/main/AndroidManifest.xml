@@ -5,19 +5,13 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:fullBackupContent="true"
         android:allowBackup="true"
-        android:icon="@drawable/stohrm_logo"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmployeeDetails">
-
-<!--        <activity-->
-<!--            android:name=".Activities.IncomeFromPESActivity"-->
-<!--            android:exported="true" />-->
-<!--        <activity-->
-<!--            android:name=".Activities.HomeActivity"-->
-<!--            android:exported="true" />-->
         <activity
             android:name=".Activities.Login_page"
             android:exported="true"

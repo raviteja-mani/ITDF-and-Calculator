@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-   <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,60 +20,63 @@
         android:layout_marginBottom="20dp"
         android:padding="10dp"
         android:background="#ADD8E6"/>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="10dp">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
             <TextView
-                android:layout_width="160dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/hd1row1Col1"
-                android:layout_marginBottom="25dp"/>
+                android:layout_weight=".6"
+                android:text="@string/hd1row1Col1" />
+
+            <EditText
+                android:id="@+id/incomeHPLetOut"
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:layout_height="30dp"
+                android:background="@drawable/edittext_border"
+                android:paddingLeft="2dp"
+                />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+                <Button
+                    android:id="@+id/btnannexure3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/hd1row12col2"
+                    android:padding="5dp"/>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
             <TextView
-                android:layout_width="160dp"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
                 android:layout_height="wrap_content"
                 android:text="@string/hd1row2col1"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center_vertical">
-       <Button
-           android:id="@+id/btnannexure3"
-           android:layout_height="110dp"
-           android:layout_width="110dp"
-                android:text="@string/hd1row12col2"
-                android:layout_gravity="center_vertical"
-
-                android:padding="5dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-        <EditText
-            android:id="@+id/incomeHPLetOut"
-            android:layout_width="95dp"
-            android:layout_height="30dp"
-            android:background="@drawable/edittext_border"
-            android:layout_marginLeft="5dp"
-            android:paddingLeft="2dp"
-            />
 
             <EditText
                 android:id="@+id/incomeHPselfoccupied"
-                android:layout_width="95dp"
+                android:layout_width="0dp"
+                android:layout_weight=".4"
                 android:layout_height="30dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginLeft="5dp"
-                android:padding="2dp"
-                android:background="@drawable/edittext_border" />
+                android:layout_gravity="fill_vertical"
+                android:background="@drawable/edittext_border"
+                android:padding="2dp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -82,18 +85,20 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="10dp"
-        android:gravity="fill_horizontal">
+        >
         <TextView
-            android:layout_width="160dp"
+            android:layout_width="0dp"
+            android:layout_weight=".6"
             android:layout_height="wrap_content"
             android:text="@string/hd1row3col1"/>
 
         <EditText
             android:id="@+id/incomeHPotherincome"
-            android:layout_width="95dp"
+            android:layout_width="0dp"
+            android:layout_weight=".4"
             android:layout_height="30dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="113dp"
+
             android:background="@drawable/edittext_border" />
     </LinearLayout>
         <LinearLayout
@@ -114,16 +119,18 @@
                 android:orientation="horizontal"
                 android:padding="10dp">
                 <TextView
-                    android:layout_width="160dp"
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
                     android:layout_height="wrap_content"
                     android:text="@string/hd2row1col1"/>
 
                 <EditText
                     android:id="@+id/incomePEsalary"
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
+                    android:layout_weight=".4"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="113dp"
+
                     android:background="@drawable/edittext_border" />
             </LinearLayout>
             <LinearLayout
@@ -133,16 +140,17 @@
                 android:padding="10dp"
                >
                 <TextView
-                    android:layout_width="160dp"
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
                     android:layout_height="wrap_content"
                     android:text="@string/hd2row2col1"/>
 
                 <EditText
                     android:id="@+id/incomePErecovered"
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
+                    android:layout_weight=".4"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="113dp"
                     android:background="@drawable/edittext_border" />
             </LinearLayout>
             <LinearLayout
@@ -152,16 +160,17 @@
                 android:padding="10dp"
                 android:gravity="fill_horizontal">
                 <TextView
-                    android:layout_width="160dp"
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
                     android:layout_height="wrap_content"
                     android:text="@string/hd2row3col1"/>
 
                 <EditText
                     android:id="@+id/incomePEprovidentfund"
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
+                    android:layout_weight=".4"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="113dp"
                     android:background="@drawable/edittext_border" />
             </LinearLayout>
             <LinearLayout
@@ -171,19 +180,20 @@
                 android:padding="10dp"
                 >
                 <TextView
-                    android:layout_width="160dp"
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
                     android:layout_height="wrap_content"
                     android:text="@string/hd2row4col1"/>
 
                 <EditText
                     android:id="@+id/incomePEtaxpaidoutside"
-                    android:layout_width="95dp"
+                    android:layout_width="0dp"
+                    android:layout_weight=".4"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="113dp"
                     android:background="@drawable/edittext_border" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
 </ScrollView>

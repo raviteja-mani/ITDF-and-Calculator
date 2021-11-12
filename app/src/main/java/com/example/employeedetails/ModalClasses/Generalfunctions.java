@@ -26,15 +26,14 @@ public class Generalfunctions {
             "Approved super annuation"};
     SharedPreferences sharedPreferences;
     public static Context context;
+    SharedPreferences.Editor prefsEditor;
     public Generalfunctions(Context context) {
         this.context=context;
-        sharedPreferences=context.getSharedPreferences("deductions",Context.MODE_PRIVATE);
+        sharedPreferences=context.getSharedPreferences("employeeDetails",Context.MODE_PRIVATE);
+        prefsEditor=sharedPreferences.edit();
     }
 
     public ArrayList<DeductionType> getDeductionArray(){
-
-
-
         Gson gson=new Gson();
          DeductionType[] arr=gson.fromJson(sharedPreferences.getString("deductions",gson.toJson(defaultDeductions())),
                  DeductionType[].class);
@@ -42,7 +41,7 @@ public class Generalfunctions {
          return a;
     }
     public void setDeductionArray(ArrayList<DeductionType> arr){
-        SharedPreferences.Editor prefsEditor=sharedPreferences.edit();
+
         Gson gson=new Gson();
         prefsEditor.putString("deductions",gson.toJson(arr));
         prefsEditor.commit();
@@ -53,6 +52,19 @@ public class Generalfunctions {
             arr.add(new DeductionType(title,0,0));
         }
         return arr;
+    }
+    public void setExemptions(Exemptions e){
+        Gson gson=new Gson();
+        prefsEditor.putString("exemptions",gson.toJson(e));
+        prefsEditor.commit();
+    }
+    public Exemptions getExemptions(){
+        Gson gson=new Gson();
+        String s=sharedPreferences.getString("exemptions",null);
+        if(s==null){
+         return new Exemptions(0,0,0,0,"Yes");
+        }
+        else return gson.fromJson(s,Exemptions.class);
     }
 
 }

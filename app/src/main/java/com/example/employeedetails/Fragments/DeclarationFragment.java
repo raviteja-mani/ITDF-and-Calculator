@@ -13,19 +13,22 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.example.employeedetails.AppSession;
 import com.example.employeedetails.R;
 
 
 public class DeclarationFragment extends Fragment {
     private OldRegimeFragment oldRegimeFragment=new OldRegimeFragment();
-    private NewRegimeFragment newRegimeFragment=new NewRegimeFragment();
+//    private NewRegimeFragment newRegimeFragment=new NewRegimeFragment();
     private Button submit;
+    AppSession session;
     TextView error;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view1= inflater.inflate(R.layout.fragment_declaration, container, false);
         RadioGroup group=(RadioGroup) view1.findViewById(R.id.radioGroup);
+        session=new AppSession(getContext());
 //System.out.println(R.id.radioOldTax);
         submit=view1.findViewById(R.id.regimeSubmit);
 
@@ -36,14 +39,15 @@ public class DeclarationFragment extends Fragment {
                 String radio=rbt.getText().toString();
 //                System.out.println(radio+"brodll");
                 if(radio.equals("Old Tax Regime")){
-
+                    session.setRegimeType("oldRegime");
                     FragmentManager fragmentManager=getFragmentManager();
                     fragmentManager.beginTransaction().addToBackStack("declaration").replace(R.id.frameLayoutContainer,oldRegimeFragment).commit();
 
                 }
                 else if(radio.equals("New Tax Regime")){
+                    session.setRegimeType("newRegime");
                     FragmentManager fragmentManager=getFragmentManager();
-                    fragmentManager.beginTransaction().addToBackStack("declaration").replace(R.id.frameLayoutContainer,newRegimeFragment).commit();
+                    fragmentManager.beginTransaction().addToBackStack("declaration").replace(R.id.frameLayoutContainer,new IncomeFragment()).commit();
 
                 }
                 else{

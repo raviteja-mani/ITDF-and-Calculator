@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EmployeeDetails</string>
+    <string name="app_name">ETDF</string>
     <string name="open">open</string>
     <string name="close">close</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -56,7 +56,7 @@
     <string name="table3_row3_col1">Income from other sources</string>
     <string name="submit">Submit</string>
     <string name="cancel">Cancel</string>
-    <string name="Tax_payable">Tax Payable</string>
+    <string name="Tax_payable">Taxable Income</string>
     <string name="income_Tax_payable">Income Tax Payable</string>
     <string name="Surcharge">Surcharge</string>
     <string name="health"><![CDATA[Health & Education Cess @ 4%]]></string>
@@ -87,4 +87,21 @@
     <string name="tabledeclaration_row11">11) Sukanya Samriddi Account</string>
     <string name="tabledeclaration_row12">12) Approved super annuation</string>
     <string name="deductionserror">Maximum total  deduction you can get is 1,50,000</string>
+    <string name="basicsalary">Basic Salary</string>
+    <string name="dearnessallowance">Dearness Allowance</string>
+    <string name="hrarecieved">HRA Recieved per annum</string>
+    <string name="totalrentpaid">Total Rent Paid</string>
+    <string name="citytype">Do you live in a metro city ?</string>
+    <string name="changeRegime">Update Regime</string>
+    <string name="hraDisplayMonth">Month</string>
+    <string name="hraDisplayLL">Land Lord Name</string>
+    <string name="hraDisplayPancard">LandLord Pancard ID</string>
+    <string name="hraDisplayLocation">Location Type(metro/non-metro)</string>
+    <string name="hraDisplayReimbersedamount">Reimberced Amount</string>
+    <string name="Update">Update</string>
+    <string name="settings">Settings</string>
+    <string-array name="programming_languages">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
 </resources>
