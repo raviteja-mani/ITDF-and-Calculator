@@ -10,9 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.employeedetails.Fragments.DeclarationFragment;
+import com.example.employeedetails.Fragments.ITDF.DeclarationFragment;
 import com.example.employeedetails.R;
-
+//unused
 public class GuideLinesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

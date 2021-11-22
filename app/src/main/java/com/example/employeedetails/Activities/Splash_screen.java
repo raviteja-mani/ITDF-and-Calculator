@@ -34,6 +34,4 @@ public class Splash_screen extends AppCompatActivity {
             }
         },5000);    
     }
-
-
 }

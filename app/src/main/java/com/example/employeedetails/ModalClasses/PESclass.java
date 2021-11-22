@@ -51,9 +51,6 @@ public class PESclass implements Serializable {
         this.incTax = incTax;
     }
 
-
-
-
     public int getGsalary() {
         return gsalary;
     }
@@ -76,5 +73,9 @@ public class PESclass implements Serializable {
 
     public int calculated(){
         return gsalary+exUSs+profTax+provfund+incTax;
+    }
+
+    public long getTotalPES() {
+        return getGsalary()-getProvfund()-getProfTax()-getExUSs();
     }
 }

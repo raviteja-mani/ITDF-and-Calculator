@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdkVersion 30
 
     defaultConfig {
         applicationId "com.example.employeedetails"
         minSdk 18
-        targetSdk 31
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -22,32 +22,47 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
+//    implementation 'com.android.support:support-annotations:27.1.1'
+//    //noinspection GradleCompatible
+//    implementation 'com.android.support:appcompat-v7:28.0.0'
+//    //noinspection GradleCompatible
+//    implementation 'com.android.support:design:28.0.0'
+//    //noinspection GradleCompatible
+//    implementation 'com.android.support:support-v4:28.0.0'
+//    //noinspection GradleCompatible
+//    implementation 'com.android.support:palette-v7:28.0.0'
+//    //noinspection GradleCompatible
+//    implementation 'com.android.support:cardview-v7:28.0.0'
+
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
 
     //retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.8.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
 
-
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.google.android.material:material:1.4.0'
     def room_version = "2.2.0"
     def lifecycle_version = "2.1.0"
-
-
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':cropper')
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation "android.arch.lifecycle:extensions:1.1.0"
+    implementation "android.arch.lifecycle:livedata-core:1.1.1"
     //room database
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"

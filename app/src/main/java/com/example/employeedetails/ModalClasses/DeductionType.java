@@ -1,9 +1,11 @@
 package com.example.employeedetails.ModalClasses;
 
-public class DeductionType {
-    String text;
-    int declared;
-    int eligible;
+import java.io.Serializable;
+
+public class DeductionType implements Serializable {
+   private String text;
+    private int declared;
+    private int eligible;
 
     public DeductionType(String text, int declared, int elegible) {
         this.text = text;

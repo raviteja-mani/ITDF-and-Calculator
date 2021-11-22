@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/stohrm_logo"
+        app:srcCompat="@drawable/stohrm_logo"
          />
 
 <!--    <TextView-->

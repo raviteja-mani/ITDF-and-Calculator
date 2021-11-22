@@ -16,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
-        tools:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/login_page"
+        tools:srcCompat="@drawable/login_page" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

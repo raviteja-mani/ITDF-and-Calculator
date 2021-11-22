@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.IncomeFromPESFragment"
+    tools:context=".Fragments.Calculator.IncomeFromPESFragment"
     android:orientation="vertical">
 
     <TableLayout
@@ -50,7 +50,7 @@
                 android:layout_weight=".4"
                 android:background="@drawable/edittext_border"
                 android:padding="10dp"
-
+                android:inputType="number"
                 />
             <!--        </com.google.android.material.textfield.TextInputLayout>-->
         </TableRow>
@@ -72,7 +72,7 @@
                 android:layout_weight=".4"
                 android:background="@drawable/edittext_border"
                 android:padding="10dp"
-
+                android:inputType="number"
                 />
         </TableRow>
 
@@ -92,7 +92,7 @@
                 android:layout_weight=".4"
                 android:background="@drawable/edittext_border"
                 android:padding="10dp"
-
+                android:inputType="number"
                 />
         </TableRow>
 
@@ -112,7 +112,7 @@
                 android:layout_weight=".4"
                 android:background="@drawable/edittext_border"
                 android:padding="10dp"
-
+                android:inputType="number"
                 />
         </TableRow>
 
@@ -132,7 +132,7 @@
                 android:layout_weight=".4"
                 android:background="@drawable/edittext_border"
                 android:padding="10dp"
-
+                android:inputType="number"
                 />
         </TableRow>
 

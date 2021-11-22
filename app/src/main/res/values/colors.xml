@@ -12,8 +12,8 @@
     <color name="filler">#D3D2DF</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="blue">#1E90FF</color>
+    <color name="blue">#1E35FF</color>
     <color name ="red">#EC2436</color>
     <color name="greyBorder">#dddede</color>
-    <color name="lightBlue">#ADD8E6</color>
+    <color name="lightBlue">#007AFB</color>
 </resources>

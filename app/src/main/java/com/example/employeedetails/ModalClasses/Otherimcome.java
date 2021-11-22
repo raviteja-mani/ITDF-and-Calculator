@@ -6,6 +6,11 @@ public class Otherimcome implements Serializable {
     int interestOnSavings;
     int otherIncome;
 
+    public Otherimcome(int interestOnSavings, int otherIncome) {
+        this.interestOnSavings = interestOnSavings;
+        this.otherIncome = otherIncome;
+    }
+
     public int getInterestOnSavings() {
         return interestOnSavings;
     }
@@ -20,5 +25,8 @@ public class Otherimcome implements Serializable {
 
     public int getOtherIncome() {
         return otherIncome;
+    }
+    public int getTotalOtherIncome(){
+        return getOtherIncome()+getInterestOnSavings();
     }
 }

@@ -17,11 +17,13 @@
         <entry key="app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.13387622149837133" />
+        <entry key="app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_menu_manage.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_menu_send.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_menu_share.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/shape.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_change_photo.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_exeption_us10.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_hradisplay.xml" value="0.1" />
@@ -37,21 +39,22 @@
         <entry key="app/src/main/res/layout/autocompletetext.xml" value="0.125" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragement_income_from_hp.xml" value="0.21" />
-        <entry key="app/src/main/res/layout/fragment_calculator.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_calculator.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_declaration.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/fragment_deductions.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_employee_details.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_deductions.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_employee_details.xml" value="0.15" />
         <entry key="app/src/main/res/layout/fragment_exeption_us10.xml" value="0.2208955223880597" />
         <entry key="app/src/main/res/layout/fragment_guide_lines.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_hra_excemption.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_hradisplay.xml" value="0.16" />
-        <entry key="app/src/main/res/layout/fragment_income.xml" value="0.26556016597510373" />
-        <entry key="app/src/main/res/layout/fragment_income_from_ccs.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_income.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/fragment_income_from_ccs.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_income_from_os.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_income_from_pes.xml" value="0.16" />
-        <entry key="app/src/main/res/layout/fragment_investments.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_investments.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_l_o_pand_s_o.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_my_profile_change_photo.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_new_regime.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_new_tax_slabs.xml" value="0.125" />
         <entry key="app/src/main/res/layout/fragment_old_regime.xml" value="0.1" />
@@ -66,6 +69,9 @@
         <entry key="app/src/main/res/menu/slabs.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11535087719298245" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.10833333333333334" />
+        <entry key="app/src/main/res/xml/provider_paths.xml" value="0.1" />
+        <entry key="cropper/src/main/res/layout/crop_image_activity.xml" value="0.1" />
+        <entry key="cropper/src/main/res/layout/crop_image_view.xml" value="0.1" />
       </map>
     </option>
   </component>

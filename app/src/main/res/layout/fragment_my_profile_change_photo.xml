@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:id="@+id/ltMainContainer"
+        android:layout_gravity = "center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Profile photo"
+           />
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:id="@+id/imgAttach">
+        </ImageView>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:text="changePhoto"
+            android:id="@+id/btnChangePhoto"
+            android:background="@color/white"
+            android:paddingBottom="10dp"
+            android:layout_gravity="center_horizontal"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/btnSave"
+
+            android:visibility="gone"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:id="@+id/idImagePicker"
+        android:visibility="gone"
+        android:layout_height="fill_parent" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity = "center_vertical"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="70dp"
+            android:layout_height="fill_parent">
+            <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/imgSelected"
+                android:padding="10dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:visibility="gone"/>
+
+            <com.theartofdev.edmodo.cropper.CropImageView
+                android:id="@+id/imgCropImage"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btnLL"
+            android:gravity="center"
+            android:layout_gravity = "center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCancel"
+  />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/btnCrop"
+     />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSelect"
+
+                android:visibility="gone"
+              />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

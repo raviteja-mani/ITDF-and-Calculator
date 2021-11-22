@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.IncomeFragment">
+    tools:context=".Fragments.ITDF.IncomeFragment"
+
+   >
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="20dp">
+        >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,7 +29,7 @@
         android:orientation="vertical"
         android:padding="10dp">
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
@@ -44,14 +46,15 @@
                 android:layout_weight=".4"
                 android:layout_height="30dp"
                 android:background="@drawable/edittext_border"
-                android:paddingLeft="2dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="7dp"
                 />
         </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:layout_gravity="center_horizontal">
+                android:gravity="center_horizontal">
                 <Button
                     android:id="@+id/btnannexure3"
                     android:layout_height="wrap_content"
@@ -60,7 +63,7 @@
                     android:padding="5dp"/>
             </LinearLayout>
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
@@ -74,9 +77,9 @@
                 android:layout_width="0dp"
                 android:layout_weight=".4"
                 android:layout_height="30dp"
-                android:layout_gravity="fill_vertical"
                 android:background="@drawable/edittext_border"
-                android:padding="2dp" />
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="7dp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -98,7 +101,7 @@
             android:layout_weight=".4"
             android:layout_height="30dp"
             android:layout_gravity="center_vertical"
-
+            android:paddingLeft="7dp"
             android:background="@drawable/edittext_border" />
     </LinearLayout>
         <LinearLayout
@@ -130,7 +133,7 @@
                     android:layout_weight=".4"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-
+                    android:paddingLeft="7dp"
                     android:background="@drawable/edittext_border" />
             </LinearLayout>
             <LinearLayout
@@ -151,6 +154,7 @@
                     android:layout_weight=".4"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
+                    android:paddingLeft="7dp"
                     android:background="@drawable/edittext_border" />
             </LinearLayout>
             <LinearLayout
@@ -171,14 +175,14 @@
                     android:layout_weight=".4"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
+                    android:paddingLeft="7dp"
                     android:background="@drawable/edittext_border" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="10dp"
-                >
+                android:padding="10dp">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight=".6"
@@ -191,6 +195,7 @@
                     android:layout_weight=".4"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
+                    android:paddingLeft="7dp"
                     android:background="@drawable/edittext_border" />
             </LinearLayout>
         </LinearLayout>

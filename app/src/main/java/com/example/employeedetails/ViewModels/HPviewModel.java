@@ -10,7 +10,7 @@ import com.example.employeedetails.ModalClasses.HouseProperty;
 import com.example.employeedetails.ModalClasses.PESclass;
 import com.example.employeedetails.RepositoryHP;
 import com.example.employeedetails.RepositoryPES;
-
+//Not used
 public class HPviewModel extends AndroidViewModel {
     private RepositoryHP repositoryHP;
     private final LiveData<HouseProperty> HPitem;

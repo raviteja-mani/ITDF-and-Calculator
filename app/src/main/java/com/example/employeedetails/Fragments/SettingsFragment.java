@@ -9,8 +9,8 @@ import androidx.fragment.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
+import com.example.employeedetails.Fragments.ITDF.DeclarationFragment;
 import com.example.employeedetails.R;
 
 public class SettingsFragment extends Fragment {
@@ -28,7 +28,6 @@ public class SettingsFragment extends Fragment {
                 Fragment fragment=new DeclarationFragment();
                 FragmentManager manager=getActivity().getSupportFragmentManager();
                 manager.beginTransaction().addToBackStack("fromSettings").replace(R.id.frameLayoutContainer,fragment).commit();
-
             }
         });
         return v;

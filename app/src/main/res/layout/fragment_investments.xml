@@ -1,14 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.InvestmentsFragment">
+    tools:context=".Fragments.ITDF.InvestmentsFragment"
+    android:orientation="vertical">
+    <LinearLayout
+        android:background="@color/filler"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:padding="10dp"
+            android:text="@string/tableDeductions_row2_col1" />
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+        <TextView
+            android:id="@+id/OSrow2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight=".3"
+            android:text="@string/tableDeductions_hd_col2"
+            android:padding="10dp" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-</FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TableLayout
+                    android:id="@+id/tableLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    tools:layout_editor_absoluteX="10dp">
+
+                    <TableRow android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:background="@color/lightBlue"
+                            android:textColor="@color/white"
+                            android:text="@string/tableDeductions_row1"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/itdf_other_deduction_recyclerview">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                    </ScrollView>
+                </TableLayout>
+
+            </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            tools:layout_editor_absoluteX="10dp">
+
+            <TableRow android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:text="Other Deductions(80cc,80ccc)"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/itdf_deduction_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            </ScrollView>
+
+        </TableLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.employeedetails.ModalClasses;
 
+import androidx.lifecycle.ViewModel;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 

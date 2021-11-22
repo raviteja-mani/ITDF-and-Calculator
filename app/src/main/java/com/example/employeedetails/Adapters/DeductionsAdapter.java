@@ -14,11 +14,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.employeedetails.ModalClasses.DeductionType;
 import com.example.employeedetails.ModalClasses.Generalfunctions;
 import com.example.employeedetails.R;
+import com.example.employeedetails.ViewModels.CalculatorViewModel;
 
 import java.util.ArrayList;
 
@@ -26,10 +28,14 @@ public class DeductionsAdapter extends RecyclerView.Adapter<DeductionsAdapter.Re
     ArrayList<DeductionType> deductions;
     Generalfunctions generalfunctions;
     Context context;
-    public DeductionsAdapter(Context context) {
+    CalculatorViewModel viewModel;
+    boolean b;
+    public DeductionsAdapter(Context context,ArrayList<DeductionType> deductions,boolean b) {
         this.context=context;
         generalfunctions=new Generalfunctions(context);
-        this.deductions=generalfunctions.getDeductionArray();
+        this.deductions=deductions;
+        this.b=b;
+//        viewModel=new ViewModelProvider(context).get(CalculatorViewModel.class);
     }
 
     @NonNull
@@ -61,7 +67,7 @@ public class DeductionsAdapter extends RecyclerView.Adapter<DeductionsAdapter.Re
         public void afterTextChanged(Editable s) {
 
         if(String.valueOf(s).equals("")){
-
+            holder.ed.setText("0");
             deductions.get(position).setDeclared(0);
 
         }
@@ -90,7 +96,7 @@ public class DeductionsAdapter extends RecyclerView.Adapter<DeductionsAdapter.Re
 //            System.out.println(dd.getEligible());
 //            }
         }
-        generalfunctions.setDeductionArray(deductions);
+        if(b)  generalfunctions.setITDFDeductionArray(deductions);
 
         }
     });
@@ -110,5 +116,8 @@ public class DeductionsAdapter extends RecyclerView.Adapter<DeductionsAdapter.Re
 //            txelegible=itemView.findViewById(R.id.deduction_eligible);
             ed=itemView.findViewById(R.id.deduction_declared);
         }
+    }
+    public ArrayList<DeductionType> getDeductionArray(){
+        return deductions;
     }
 }

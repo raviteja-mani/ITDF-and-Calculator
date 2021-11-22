@@ -4,19 +4,17 @@ import android.text.Editable;
 import android.text.TextWatcher;
 
 import com.example.employeedetails.ModalClasses.HouseProperty;
-import com.example.employeedetails.ViewModels.HPviewModel;
+import com.example.employeedetails.ViewModels.CalculatorViewModel;
 
 public class TextChanges implements TextWatcher {
     HouseProperty item;
-    HPviewModel viewmodel;
+    CalculatorViewModel viewmodel;
     int i;
-    public TextChanges(HouseProperty hp, HPviewModel viewmodel,int i) {
+    public TextChanges(HouseProperty hp, CalculatorViewModel viewmodel, int i) {
         this.item = hp;
         this.viewmodel = viewmodel;
         this.i=i;
     }
-
-
 
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -50,6 +48,6 @@ public class TextChanges implements TextWatcher {
             break;
 
     }
-    viewmodel.update(item);
+    viewmodel.setHouseProperty(item);
     }
 }

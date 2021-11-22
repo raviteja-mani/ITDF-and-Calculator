@@ -1,7 +1,6 @@
 package com.example.employeedetails.Adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +15,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 //import com.example.employeedetails.Activities.HRADisplayActivity;
-import com.example.employeedetails.Fragments.HRADisplayFragment;
+import com.example.employeedetails.Fragments.ITDF.HRADisplayFragment;
 import com.example.employeedetails.ModalClasses.HRAItem;
 import com.example.employeedetails.R;
 

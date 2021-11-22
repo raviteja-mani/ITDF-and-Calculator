@@ -1,7 +1,14 @@
 package com.example.employeedetails.Activities;
 
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -10,24 +17,15 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Toast;
-
 import com.example.employeedetails.AppSession;
-import com.example.employeedetails.Fragments.CalculatorFragment;
-import com.example.employeedetails.Fragments.DeclarationFragment;
+import com.example.employeedetails.Fragments.Calculator.CalculatorFragment;
 import com.example.employeedetails.Fragments.EmployeeDetails;
 import com.example.employeedetails.Fragments.GuideLinesFragment;
 import com.example.employeedetails.Fragments.HomeFragment;
-import com.example.employeedetails.Fragments.IncomeFragment;
-import com.example.employeedetails.Fragments.NewRegimeFragment;
+import com.example.employeedetails.Fragments.ITDF.DeclarationFragment;
+import com.example.employeedetails.Fragments.ITDF.IncomeFragment;
+import com.example.employeedetails.Fragments.ITDF.OldRegimeFragment;
 import com.example.employeedetails.Fragments.NewTaxSlabsFragment;
-import com.example.employeedetails.Fragments.OldRegimeFragment;
 import com.example.employeedetails.Fragments.SettingsFragment;
 import com.example.employeedetails.Fragments.SlabsFragment;
 import com.example.employeedetails.R;
@@ -42,7 +40,7 @@ public class MainActivity extends AppCompatActivity   implements NavigationView.
     AppSession session;
 
     FragmentManager fragmentManager=getSupportFragmentManager();
-    private GuideLinesFragment guideLinesFragment;
+//    private GuideLinesFragment guideLinesFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,9 +141,9 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
                 break;
         }
         if(id!=R.id.logout) {
-            fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+//            fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
             FragmentTransaction transaction = fragmentManager.beginTransaction();
-            transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+//            transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
             transaction.addToBackStack("First").replace(R.id.frameLayoutContainer, fragment).commit();
 //            item.setChecked(true);
         }
@@ -179,4 +177,5 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
         startActivity(i);
         finish();
     }
+
 }

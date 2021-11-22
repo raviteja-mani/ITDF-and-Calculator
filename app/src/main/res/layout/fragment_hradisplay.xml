@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.HRADisplayFragment">
+    tools:context=".Fragments.ITDF.HRADisplayFragment">
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -30,6 +29,7 @@
                android:layout_weight=".5"
                android:layout_height="40dp"
                android:background="@drawable/edittext_border"
+               android:paddingLeft="10dp"
               />
        </LinearLayout>
 <!--        LLname-->
@@ -53,7 +53,8 @@
                 android:layout_weight=".5"
                 android:layout_height="40dp"
                 android:background="@drawable/edittext_border"
-               />
+                android:paddingLeft="10dp"
+                />
         </LinearLayout>
 <!--        LandLord Pancard ID(pancardId)-->
         <LinearLayout
@@ -75,6 +76,7 @@
                 android:layout_width="0dp"
                 android:layout_weight=".5"
                 android:layout_height="40dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/edittext_border" />
         </LinearLayout>
 <!--        City Type(locationType)-->
@@ -98,7 +100,7 @@
                 android:layout_weight=".5"
                 android:layout_height="40dp"
                 android:background="@drawable/edittext_border"
-
+                android:paddingLeft="10dp"
                 />
         </LinearLayout>
 <!--        Reimberced Amount(amount)-->
@@ -121,7 +123,8 @@
                 android:layout_weight=".5"
                 android:layout_height="40dp"
                 android:background="@drawable/edittext_border"
-                android:autoSizeTextType="uniform"/>
+                android:autoSizeTextType="uniform"
+                android:paddingLeft="10dp"/>
         </LinearLayout>
 
 

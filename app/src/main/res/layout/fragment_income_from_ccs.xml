@@ -1,9 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.IncomeFromCCsFragment">
+    tools:context=".Fragments.Calculator.IncomeFromCCsFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                tools:layout_editor_absoluteX="10dp">
+
+                <TableRow android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:background="@color/lightBlue"
+                        android:text="@string/tableDeductions_row1"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@color/filler"
+                    android:layout_marginBottom="10dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:padding="10dp"
+                        android:text="@string/tableDeductions_row2_col1" />
+
+                    <TextView
+                        android:id="@+id/OSrow1"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight=".3"
+                        android:text="@string/tableDeductions_hd_col2"
+                        android:padding="10dp" />
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight=".2"
+                                    android:text="@string/tableDeductions_hd_col3"
+                                    android:padding="10dp"
+                                    />
+
+                </TableRow>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/other_deduction_recyclerview">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            >
+
+            <Button
+                android:id="@+id/other_deduction_backbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/blue"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Ok"
+                android:textColor="@color/white"
+                />
+
+            <!--        <Button-->
+            <!--            android:id="@+id/btnCancel"-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="48dp"-->
+            <!--            android:layout_gravity="center_horizontal"-->
+            <!--            android:layout_weight="1"-->
+            <!--            android:background="@color/blue"-->
+            <!--            android:text="@string/cancel"-->
+            <!--            android:textColor="@color/white"-->
+            <!--            />-->
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

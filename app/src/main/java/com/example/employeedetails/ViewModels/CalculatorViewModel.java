@@ -1,94 +1,78 @@
 package com.example.employeedetails.ViewModels;
 
-import android.app.Application;
-
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.employeedetails.ModalClasses.DeductionType;
 import com.example.employeedetails.ModalClasses.Exemptions;
-import com.example.employeedetails.ModalClasses.OtherDeductins;
+import com.example.employeedetails.ModalClasses.HouseProperty;
+import com.example.employeedetails.ModalClasses.OtherDeductions;
 import com.example.employeedetails.ModalClasses.Otherimcome;
 import com.example.employeedetails.ModalClasses.PESclass;
 
+import java.util.ArrayList;
+
 public class CalculatorViewModel extends ViewModel {
-    private static long grossSalary;
-    private static Exemptions e;
-    private static long ProfessionalTax;
-    private static long standartDeductions=50000;
-    private static PESclass pes;
-    private static Otherimcome otherincome;
-    private static DeductionType deductions;
-    private static OtherDeductins otherDeductins;
-    private MutableLiveData<Integer> taxableIncome=new MutableLiveData<>();
-    private MutableLiveData<Integer> incometaxpayable=new MutableLiveData<>();
-    private MutableLiveData<Integer> surcharge=new MutableLiveData<>();
-    private MutableLiveData<Integer> health=new MutableLiveData<>();
-    public static long getGrossSalary() {
-        return grossSalary;
+
+    private MutableLiveData<PESclass> pesItem=new MutableLiveData<>();
+    private MutableLiveData<HouseProperty> houseProperty=new MutableLiveData<>();
+    private MutableLiveData<Otherimcome> otherIncome=new MutableLiveData<>();
+    private MutableLiveData<Exemptions> exemptions=new MutableLiveData<>();
+    private MutableLiveData<ArrayList<DeductionType>> deductions=new MutableLiveData<>();
+    private MutableLiveData<Long> grossSalary=new MutableLiveData<>();
+    private MutableLiveData<ArrayList<OtherDeductions>> otherDeduction=new MutableLiveData<>();
+    public void setHouseProperty(HouseProperty h){
+        houseProperty.setValue(h);
+    }
+    public MutableLiveData<HouseProperty> getHouseProperty(){
+        if(houseProperty.getValue()==null) setHouseProperty(new HouseProperty(0,0,0,0));
+        return houseProperty;
     }
 
-    public static void setGrossSalary(long grossSalary) {
-        CalculatorViewModel.grossSalary = grossSalary;
+    public void setPesItem(PESclass pes){
+        pesItem.setValue(pes);
+    }
+    public MutableLiveData<PESclass> getPesItem(){
+        if(pesItem.getValue()==null) setPesItem(new PESclass(0,0,0,0,0));
+        return pesItem;
     }
 
-    public static Exemptions getE() {
-        return e;
+    public MutableLiveData<Otherimcome> getOtherIncome(){
+        if(otherIncome.getValue()==null) setOtherIncomeItem(new Otherimcome(0,0));
+        return otherIncome;
+    }
+    public void setOtherIncomeItem(Otherimcome oi){
+        otherIncome.setValue(oi);
     }
 
-    public static void setE(Exemptions e) {
-        CalculatorViewModel.e = e;
+    public MutableLiveData<Exemptions> getExemptions(){
+        if(exemptions.getValue()==null) setExemptions(new Exemptions(0,0,0,0,"Yes"));
+        return exemptions;
+    }
+    public void setExemptions(Exemptions ex){
+        exemptions.setValue(ex);
     }
 
-    public static long getProfessionalTax() {
-        return ProfessionalTax;
-    }
-
-    public static void setProfessionalTax(long professionalTax) {
-        ProfessionalTax = professionalTax;
-    }
-
-    public static long getStandartDeductions() {
-        return standartDeductions;
-    }
-
-    public static void setStandartDeductions(long standartDeductions) {
-        CalculatorViewModel.standartDeductions = standartDeductions;
-    }
-
-    public static PESclass getPes() {
-        return pes;
-    }
-
-    public static void setPes(PESclass pes) {
-        CalculatorViewModel.pes = pes;
-    }
-
-    public static Otherimcome getOtherincome() {
-        return otherincome;
-    }
-
-    public static void setOtherincome(Otherimcome otherincome) {
-        CalculatorViewModel.otherincome = otherincome;
-    }
-
-    public static DeductionType getDeductions() {
+    public MutableLiveData<ArrayList<DeductionType>> getDeductions(){
+//        if(deductions.getValue()==null) setDeductions(new Exemptions(0,0,0,0,"Yes"));
         return deductions;
     }
-
-    public static void setDeductions(DeductionType deductions) {
-        CalculatorViewModel.deductions = deductions;
+    public void setDeductions(ArrayList<DeductionType> ex){
+        deductions.setValue(ex);
     }
 
-    public static OtherDeductins getOtherDeductins() {
-        return otherDeductins;
+    public MutableLiveData<Long> getGrossSalary(){
+        return grossSalary;
+    }
+    public void setGrossSalary(Long val){
+        grossSalary.setValue(val);
     }
 
-    public static void setOtherDeductins(OtherDeductins otherDeductins) {
-        CalculatorViewModel.otherDeductins = otherDeductins;
+    public MutableLiveData<ArrayList<OtherDeductions>> getOtherDeductions() {
+        return otherDeduction;
     }
 
-
-
-
+    public void setOtherDeductions(ArrayList<OtherDeductions> otherDeductions) {
+        otherDeduction.setValue(otherDeductions);
+    }
 }
