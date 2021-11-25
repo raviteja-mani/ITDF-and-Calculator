@@ -27,6 +27,9 @@ public class SettingsFragment extends Fragment {
             public void onClick(View v) {
                 Fragment fragment=new DeclarationFragment();
                 FragmentManager manager=getActivity().getSupportFragmentManager();
+                Bundle bundle=new Bundle();
+                bundle.putString("fromMain","No");
+                fragment.setArguments(bundle);
                 manager.beginTransaction().addToBackStack("fromSettings").replace(R.id.frameLayoutContainer,fragment).commit();
             }
         });

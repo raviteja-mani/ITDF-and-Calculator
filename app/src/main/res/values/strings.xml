@@ -104,6 +104,13 @@
     <string name="oldRegime">Old Regime</string>
     <string name="NewRegime">New Regime</string>
     <string name="taxLiable">Total Tax Liabilty</string>
+    <string name="conditionTochangeRegime">You can change the Regime type in settings</string>
+    <string name="selfOccupied_property_heading">Self Occupied</string>
+    <string name="co_applicant_declaration_heading">Declaration of Co-Applicant Details</string>
+    <string name="letout_property_heading">Let Out</string>
+    <string name="changePhoto"><u>Change Photo</u></string>
+    <string name="clear">clear</string>
+    <string name="savePhoto"><u>Save Photo</u></string>
     <string-array name="programming_languages">
         <item>Yes</item>
         <item>No</item>

@@ -52,54 +52,37 @@ public class DeductionsAdapter extends RecyclerView.Adapter<DeductionsAdapter.Re
         DeductionType d=deductions.get(position);
     holder.ed.setText(String.valueOf(d.getDeclared()));
     holder.tv.setText(d.getText());
-    holder.ed.addTextChangedListener(new TextWatcher() {
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-        }
+        holder.ed.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
 
-        }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-        @Override
-        public void afterTextChanged(Editable s) {
+            }
 
-        if(String.valueOf(s).equals("")){
-            holder.ed.setText("0");
-            deductions.get(position).setDeclared(0);
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    if (String.valueOf(s).equals("") || !(String.valueOf(s).matches("[0-9]*"))) {
+                        holder.ed.setText("0");
+                        deductions.get(position).setDeclared(0);
 
-        }
-        else{
-            int i=Integer.parseInt(String.valueOf(s));
+                    } else {
+                        int i = Integer.parseInt(String.valueOf(s));
 
-            deductions.get(position).setDeclared(i);
-//            for(DeductionType dd: deductions){
-//                if(total==max) {
-//                    dd.setEligible(0);
-//                }
-//                else {
-//                    if(total+dd.getDeclared()>max) {
-//                        total=total+(max-total);
-//                        dd.setEligible(max-total);
-//
-//                    }
-//                    else{
-//
-//                        total+=dd.getDeclared();
-//                        dd.setEligible(i);
-////                        holder.txelegible.setText(String.valueOf(dd.getEligible()));
-//                    }
-//                }
-////                Log.d("ravi",String.valueOf(dd.getEligible()));
-//            System.out.println(dd.getEligible());
-//            }
-        }
-        if(b)  generalfunctions.setITDFDeductionArray(deductions);
-
-        }
-    });
+                        deductions.get(position).setDeclared(i);
+                    }
+                    if (b) generalfunctions.setITDFDeductionArray(deductions);
+                }
+                catch(Exception e){
+                        //todo
+                    }
+            }
+        });
     }
 
     @Override

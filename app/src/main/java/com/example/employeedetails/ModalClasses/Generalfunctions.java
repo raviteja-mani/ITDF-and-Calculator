@@ -164,4 +164,18 @@ public class Generalfunctions {
         prefsEditor.putString("ITDFOtherdeductions",gson.toJson(deductions));
         prefsEditor.commit();
     }
+    public Otherimcome getOtherIncome(String type){
+        Gson gson=new Gson();
+        return gson.fromJson(sharedPreferences.getString("OS"+type,gson.toJson(new Otherimcome(0,0 ))), Otherimcome.class);
+    }
+
+    public PESclass getPES(String type) {
+        Gson gson=new Gson();
+        return gson.fromJson(sharedPreferences.getString("pesItem"+type,gson.toJson(new PESclass(0,0 ,0,0,0))), PESclass.class);
+    }
+    public void setPES(PESclass pes,String type){
+        Gson gson=new Gson();
+        prefsEditor.putString("pesItem"+type,gson.toJson(pes));
+        prefsEditor.commit();
+    }
 }

@@ -1,9 +1,11 @@
 package com.example.employeedetails.Fragments.ITDF;
 
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +20,7 @@ import com.example.employeedetails.R;
 
 
 public class DeclarationFragment extends Fragment {
-    private OldRegimeFragment oldRegimeFragment=new OldRegimeFragment();
+    private OldRegimeFragment oldRegimeFragment;
 //    private NewRegimeFragment newRegimeFragment=new NewRegimeFragment();
     private Button submit;
     AppSession session;
@@ -30,6 +32,7 @@ public class DeclarationFragment extends Fragment {
         getActivity().setTitle("Tax Declaration");
         RadioGroup group=(RadioGroup) view1.findViewById(R.id.radioGroup);
         session=new AppSession(getContext());
+        oldRegimeFragment=new OldRegimeFragment();
 //System.out.println(R.id.radioOldTax);
         submit=view1.findViewById(R.id.regimeSubmit);
 
@@ -38,18 +41,22 @@ public class DeclarationFragment extends Fragment {
             public void onClick(View view) {
                 RadioButton rbt=(view1.findViewById(group.getCheckedRadioButtonId()));
                 String radio=rbt.getText().toString();
+
+                String val=getArguments().getString("fromMain","No");
 //                System.out.println(radio+"brodll");
                 if(radio.equals("Old Tax Regime")){
                     session.setRegimeType("oldRegime");
-                    FragmentManager fragmentManager=getFragmentManager();
-//                    fragmentManager.beginTransaction().addToBackStack("declaration").replace(R.id.frameLayoutContainer,oldRegimeFragment).commit();
-                    fragmentManager.popBackStack();
+                    FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
+                   if(val.equals("yes")) fragmentManager.beginTransaction().addToBackStack("declaration").replace(R.id.frameLayoutContainer,oldRegimeFragment).commit();
+                   else fragmentManager.popBackStack();
                 }
                 else if(radio.equals("New Tax Regime")){
                     session.setRegimeType("newRegime");
-                    FragmentManager fragmentManager=getFragmentManager();
-//                    fragmentManager.beginTransaction().addToBackStack("declaration").replace(R.id.frameLayoutContainer,new IncomeFragment()).commit();
-                    fragmentManager.popBackStack();
+                    FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
+//
+                    if(val.equals("yes")) fragmentManager.beginTransaction().addToBackStack("declaration").replace(R.id.frameLayoutContainer,new IncomeFragment()).commit();
+                    else fragmentManager.popBackStack();
+//                    fragmentManager.popBackStack();
                 }
                 else{
                     error=view.findViewById(R.id.declarationError);

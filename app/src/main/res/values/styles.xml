@@ -20,5 +20,7 @@
     <style name="circular">
         <item name="cornerSize">50%</item>
     </style>
-
+<style name="underline">
+    <item name="android:textAppearance"></item>
+</style>
 </resources>

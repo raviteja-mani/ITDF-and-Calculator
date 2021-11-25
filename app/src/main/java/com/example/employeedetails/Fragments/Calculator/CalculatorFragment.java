@@ -131,11 +131,10 @@ public class CalculatorFragment extends Fragment implements View.OnClickListener
             }
             @Override
             public void afterTextChanged(Editable s) {
-                if(String.valueOf(s).equals("")) {
+                if(String.valueOf(s).equals("")||!(String.valueOf(s).matches("[0-9]*"))) {
                     viewmodelHP.setGrossSalary((long)0);
-                };
-
-                viewmodelHP.setGrossSalary(Long.parseLong(String.valueOf(s)));
+                }
+                else  viewmodelHP.setGrossSalary(Long.parseLong(String.valueOf(s)));
             }
         });
 

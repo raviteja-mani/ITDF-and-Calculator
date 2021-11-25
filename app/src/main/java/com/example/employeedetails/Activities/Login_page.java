@@ -28,7 +28,7 @@ public class Login_page extends AppCompatActivity {
         username=findViewById(R.id.username);
         password=findViewById(R.id.password_edit_text);
         error=findViewById(R.id.loginerror);
-        session=new AppSession(this);
+        session=new AppSession(this.getApplicationContext());
 //        getSupportActionBar().setTitle("Login Please");
         loginBtn=findViewById(R.id.Loginbutton);
         getSupportActionBar().setTitle("Please Login");

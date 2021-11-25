@@ -13,7 +13,11 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="blue">#1E35FF</color>
-    <color name ="red">#EC2436</color>
-    <color name="greyBorder">#dddede</color>
     <color name="lightBlue">#007AFB</color>
+
+
+
+
+    <color name="red">#FF0000</color>
+    <color name="greyBorder">#dddede</color>
 </resources>

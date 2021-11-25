@@ -33,7 +33,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity   implements NavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity   implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.OnGridviewItemSelectedListener {
     private DrawerLayout drawer;
     private ActionBarDrawerToggle t;
     private NavigationView navigationView;
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity   implements NavigationView.
 //        toolbar.setLogo(R.drawable.stohrm_logo);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
-fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frameLayoutContainer,new EmployeeDetails()).commit();
+fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frameLayoutContainer,new HomeFragment()).commit();
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -101,6 +101,9 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
            case R.id.newtax:
                fragment =new NewTaxSlabsFragment();
                break;
+           case R.id.home:
+               fragment=new HomeFragment();
+               break;
        }
 
        fragmentManager.beginTransaction().addToBackStack("First").replace(R.id.frameLayoutContainer,fragment).commit();
@@ -113,12 +116,20 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        onItemClicked(id);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+    public void onItemClicked(int id){
         Fragment fragment=null;
         switch(id)
         {
             case R.id.details:
                 if(session.getRegimeType()==null) {
                     fragment = new DeclarationFragment();
+                    Bundle bundle=new Bundle();
+                    bundle.putString("fromMain","yes");
+                    fragment.setArguments(bundle);
                 }
                 else if(session.getRegimeType().equals("oldRegime")) fragment=new OldRegimeFragment();
                 else fragment=new IncomeFragment();
@@ -147,8 +158,7 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
             transaction.addToBackStack("First").replace(R.id.frameLayoutContainer, fragment).commit();
 //            item.setChecked(true);
         }
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
+
     }
 
     @Override
@@ -178,4 +188,16 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
         finish();
     }
 
+    @Override
+    public void onGridviewItemPicked(String item) {
+    switch(item){
+        case "MyProfile":onItemClicked(R.id.profile);
+        break;
+        case "DeclarationForm":onItemClicked(R.id.details);
+        break;
+        case "taxCalculator":
+            onItemClicked(R.id.nav_calculator);
+            break;
+    }
+    }
 }

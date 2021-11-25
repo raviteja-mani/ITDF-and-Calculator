@@ -4,17 +4,29 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.13387622149837133" />
+        <entry key="app/src/main/res/drawable/button_round.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/close.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/dash_line.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/delete.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/edittext_border.xml" value="0.13387622149837133" />
+        <entry key="app/src/main/res/drawable/export_import.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/grey_border.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_baseline_calculate_24.xml" value="0.13387622149837133" />
+        <entry key="app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_history_24.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_baseline_menu_book_24.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_baseline_mode_24.xml" value="0.13387622149837133" />
+        <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_baseline_person_outline_24.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.13387622149837133" />
+        <entry key="app/src/main/res/drawable/ic_fingerprint.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_fingerprint_error.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_fingerprint_success.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_graph.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1" />
@@ -22,7 +34,25 @@
         <entry key="app/src/main/res/drawable/ic_menu_send.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_menu_share.xml" value="0.13387622149837133" />
         <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.13387622149837133" />
+        <entry key="app/src/main/res/drawable/image_circle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/list_gradiant.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/list_gradiant_company.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/multitext_bottom.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/multitext_top.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/my_rectangle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/orange_with_shadow.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/oval_ripple.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/profile_border.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/red_border.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/rounded_edittext.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/rounded_textview.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/rounded_textview_orange.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/selector_check.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/spinner_border.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/splash_bg.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/table_border_white.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/verify_otp_green.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_change_photo.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_exeption_us10.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.1" />
@@ -39,21 +69,22 @@
         <entry key="app/src/main/res/layout/autocompletetext.xml" value="0.125" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragement_income_from_hp.xml" value="0.21" />
-        <entry key="app/src/main/res/layout/fragment_calculator.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_calculator.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_declaration.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_deductions.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_employee_details.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/fragment_employee_details.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_exeption_us10.xml" value="0.2208955223880597" />
+        <entry key="app/src/main/res/layout/fragment_gridview.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_guide_lines.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_hra_excemption.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_hradisplay.xml" value="0.16" />
-        <entry key="app/src/main/res/layout/fragment_income.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/fragment_income.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_income_from_ccs.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_income_from_os.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_income_from_pes.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_investments.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_l_o_pand_s_o.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_l_o_pand_s_o.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_my_profile_change_photo.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_new_regime.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_new_tax_slabs.xml" value="0.125" />
@@ -64,7 +95,7 @@
         <entry key="app/src/main/res/layout/header_layout.xml" value="0.18" />
         <entry key="app/src/main/res/layout/maintain.xml" value="0.1" />
         <entry key="app/src/main/res/layout/recyclerdeductionview_item.xml" value="0.125" />
-        <entry key="app/src/main/res/layout/recyclerview_item.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/recyclerview_item.xml" value="0.25" />
         <entry key="app/src/main/res/menu/menus.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/menu/slabs.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11535087719298245" />

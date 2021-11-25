@@ -13,13 +13,13 @@ public class PESclass implements Serializable {
     @NonNull
     public int id;
 
-    public int gsalary;
-    public int exUSs;
-    public int profTax;
-    public int provfund;
-    public int incTax;
+    public long gsalary;
+    public long exUSs;
+    public long profTax;
+    public long provfund;
+    public long incTax;
 
-    public PESclass(int gsalary, int exUSs, int profTax, int provfund, int incTax) {
+    public PESclass(long gsalary, long exUSs, long profTax, long provfund, long incTax) {
         this.gsalary = gsalary;
         this.exUSs = exUSs;
         this.profTax = profTax;
@@ -31,47 +31,47 @@ public class PESclass implements Serializable {
         this.id = id;
     }
 
-    public void setGsalary(int gsalary) {
+    public void setGsalary(long gsalary) {
         this.gsalary = gsalary;
     }
 
-    public void setExUSs(int exUSs) {
+    public void setExUSs(long exUSs) {
         this.exUSs = exUSs;
     }
 
-    public void setProfTax(int profTax) {
+    public void setProfTax(long profTax) {
         this.profTax = profTax;
     }
 
-    public void setProvfund(int provfund) {
+    public void setProvfund(long provfund) {
         this.provfund = provfund;
     }
 
-    public void setIncTax(int incTax) {
+    public void setIncTax(long incTax) {
         this.incTax = incTax;
     }
 
-    public int getGsalary() {
+    public long getGsalary() {
         return gsalary;
     }
 
-    public int getExUSs() {
+    public long getExUSs() {
         return exUSs;
     }
 
-    public int getProfTax() {
+    public long getProfTax() {
         return profTax;
     }
 
-    public int getProvfund() {
+    public long getProvfund() {
         return provfund;
     }
 
-    public int getIncTax() {
+    public long getIncTax() {
         return incTax;
     }
 
-    public int calculated(){
+    public long calculated(){
         return gsalary+exUSs+profTax+provfund+incTax;
     }
 
