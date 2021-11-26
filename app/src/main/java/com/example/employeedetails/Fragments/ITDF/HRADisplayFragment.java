@@ -12,8 +12,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.example.employeedetails.ModalClasses.HRAItem;
 import com.example.employeedetails.ViewModels.HRAviewModel;
@@ -26,9 +28,10 @@ public class HRADisplayFragment extends Fragment {
     EditText month;
     EditText name;
     EditText panncard;
-    EditText location;
+//    EditText location;
     EditText amount;
     HRAviewModel viewModel;
+    Spinner spinner;
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
@@ -105,16 +108,23 @@ public class HRADisplayFragment extends Fragment {
         Updatebtn=v.findViewById(R.id.update_button);
         deletebtn=v.findViewById(R.id.deletebutton);
         month=v.findViewById(R.id.month);
+        month.setFocusable(false);
         name=v.findViewById(R.id.LLname);
         panncard=v.findViewById(R.id.pancardId);
-        location=v.findViewById(R.id.locationType);
+        spinner=v.findViewById(R.id.locationType);
         amount=v.findViewById(R.id.amount);
 
         //placind data in text fields
         month.setText(item.getMonth());
         name.setText(item.getLandlordname());
         panncard.setText(item.getPancard());
-        location.setText(item.getPancard());
+        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(getContext(),R.array.metro_nonmetro,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        if(item.getLocation().equals("Metro"))
+            spinner.setSelection(0);
+        else spinner.setSelection(1);
+//        location.setText(item.getPancard());
         amount.setText(String.valueOf(item.getAmount()));
 
 
@@ -137,10 +147,13 @@ public class HRADisplayFragment extends Fragment {
 //                int amt=Integer.parseInt(String.valueOf(amount.getText()));
 //                HRAItem item=new HRAItem();
 //                fromItem.getId(),monthstr,lordnamestr,panstr,locationstr,amt
+
                 item.setMonth(String.valueOf(month.getText()));
                 item.setLandlordname(String.valueOf(name.getText()));
                 item.setPancard(String.valueOf(panncard.getText()));
-                item.setLocation(String.valueOf(location.getText()));
+                if(spinner.getSelectedItemPosition()==0)
+                item.setLocation("Metro");
+                else item.setLocation("Non-Metro");
                 if(String.valueOf(amount.getText()).equals("")) item.setAmount(0);
                 else item.setAmount(Integer.parseInt(String.valueOf(amount.getText())));
 //                viewModel.delete(fromItem);

@@ -54,6 +54,7 @@
                 android:layout_height="40dp"
                 android:background="@drawable/edittext_border"
                 android:paddingLeft="10dp"
+
                 />
         </LinearLayout>
 <!--        LandLord Pancard ID(pancardId)-->
@@ -94,14 +95,14 @@
                 android:textSize="18sp"
                 android:text="@string/hraDisplayLocation"
                 android:paddingRight="3dp"/>
-            <EditText
+
+            <Spinner
                 android:id="@+id/locationType"
                 android:layout_width="0dp"
                 android:layout_weight=".5"
-                android:layout_height="40dp"
-                android:background="@drawable/edittext_border"
                 android:paddingLeft="10dp"
-                />
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_border"/>
         </LinearLayout>
 <!--        Reimberced Amount(amount)-->
         <LinearLayout
@@ -124,7 +125,8 @@
                 android:layout_height="40dp"
                 android:background="@drawable/edittext_border"
                 android:autoSizeTextType="uniform"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:inputType="number"/>
         </LinearLayout>
 
 

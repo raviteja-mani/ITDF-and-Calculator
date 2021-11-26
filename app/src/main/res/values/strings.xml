@@ -111,8 +111,22 @@
     <string name="changePhoto"><u>Change Photo</u></string>
     <string name="clear">clear</string>
     <string name="savePhoto"><u>Save Photo</u></string>
+    <string name="selfOccupied_text1">1) Are you Paying Interest on Housing Loan Which is Self-Occupied</string>
+    <string name="selfOccupied_text2">2) Is the Property a Joint Property</string>
+    <string name="selfOccupied_text3">3) What is the Percentage of your contribution towards Repayment of Loans. Applicable only if Point 2 is yes</string>
+    <string name="selfOccupied_text4">4) Month and Year of completion of the Property</string>
+    <string name="selfOccupied_text5">5) Interest repayment made in current year</string>
+    <string name="selfOccupied_text6">6) Pre  EMI paid if any in the current year other than regular Interest repayment</string>
+    <string name="selfOccupied_text7">7) Pre EMI -year 1</string>
+    <string name="coapplicant_text1">Is there a co-applicant to your Housing Loan . If yes. Please Provide the name</string>
+    <string name="coapplicant_text2">Co Applicant Name 1</string>
+    <string name="coapplicant_text3">Co Applicant Name 2</string>
     <string-array name="programming_languages">
         <item>Yes</item>
         <item>No</item>
+    </string-array>
+    <string-array name="metro_nonmetro">
+        <item>Metro</item>
+        <item>Non-Metro</item>
     </string-array>
 </resources>
