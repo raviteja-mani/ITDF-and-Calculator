@@ -342,20 +342,20 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".4"
                 android:text="@string/Taxcomputation"
-                />
+                android:textColor="@color/white"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="@string/oldRegime"
-
+                android:textColor="@color/white"
                 />
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight=".3"
                     android:text="@string/NewRegime"
-
+                    android:textColor="@color/white"
                     />
         </LinearLayout>
             <LinearLayout

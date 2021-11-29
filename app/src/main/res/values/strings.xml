@@ -121,6 +121,7 @@
     <string name="coapplicant_text1">Is there a co-applicant to your Housing Loan . If yes. Please Provide the name</string>
     <string name="coapplicant_text2">Co Applicant Name 1</string>
     <string name="coapplicant_text3">Co Applicant Name 2</string>
+    <string name="noInternet">Please check your Internet Connection</string>
     <string-array name="programming_languages">
         <item>Yes</item>
         <item>No</item>

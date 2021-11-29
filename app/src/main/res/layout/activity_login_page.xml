@@ -9,6 +9,7 @@
     tools:context=".Activities.Login_page">
 
     <LinearLayout
+        android:id="@+id/loginpage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -40,7 +41,7 @@
             android:inputType="text"
             android:maxLines="1"
             app:endIconMode="clear_text"
-            android:hint="User ID"
+            android:hint="EmailID"
             />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,9 +64,10 @@
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
+
         <RelativeLayout
             android:layout_width="392dp"
-            android:layout_height="wrap_content"
+            android:layout_height="102dp"
             android:layout_gravity="center">
 
             <Button
@@ -74,14 +76,28 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
                 android:layout_marginStart="146dp"
                 android:layout_marginRight="111dp"
-                android:layout_marginBottom="0dp"
                 android:text="Login"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
+            <Button
+                android:id="@+id/signupbutton"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Loginbutton"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="146dp"
+
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="160dp"
+                android:layout_marginRight="42dp"
+                android:layout_marginBottom="-7dp"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <TextView
@@ -103,5 +119,12 @@
             android:visibility="invisible"
             android:layout_gravity="center_horizontal"
             android:layout_margin="10dp"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone" />
     </LinearLayout>
 </ScrollView>

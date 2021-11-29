@@ -49,7 +49,10 @@ public class User {
     }
 
     public String getUsername() {
-        return username;
+
+        if(username==null)
+            return "";
+        else return username;
     }
 
     public void setUsername(String username) {
@@ -114,4 +117,6 @@ public class User {
     public String getUserFullName(){
         return getFirst_name()+getLast_name();
     }
+
+
 }

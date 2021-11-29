@@ -87,8 +87,9 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_weight=".4"
-                android:layout_height="wrap_content"
-                android:background="@drawable/edittext_border"/>
+                android:layout_height="35dp"
+                android:background="@drawable/edittext_border"
+                android:paddingLeft="3dp"/>
 
         </LinearLayout>
     <LinearLayout
@@ -108,7 +109,8 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_weight=".4"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
+                android:paddingLeft="4dp"
                 android:background="@drawable/edittext_border"/>
 
         </LinearLayout>
@@ -129,7 +131,8 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_weight=".4"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
+                android:paddingLeft="4dp"
                 android:background="@drawable/edittext_border"/>
 
         </LinearLayout>
@@ -149,7 +152,8 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_weight=".4"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
+                android:paddingLeft="4dp"
                 android:background="@drawable/edittext_border"/>
 
         </LinearLayout>
@@ -170,7 +174,8 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_weight=".4"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
+                android:paddingLeft="4dp"
                 android:background="@drawable/edittext_border"/>
 
         </LinearLayout>
@@ -236,7 +241,8 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_weight=".4"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
+                android:paddingLeft="4dp"
                 android:background="@drawable/edittext_border"/>
 
         </LinearLayout>
@@ -256,7 +262,8 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_weight=".4"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
+                android:paddingLeft="4dp"
                 android:background="@drawable/edittext_border"/>
 
         </LinearLayout>

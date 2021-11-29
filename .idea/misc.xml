@@ -62,14 +62,15 @@
         <entry key="app/src/main/res/layout/activity_income_from_hpactivity.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_income_from_osactivity.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_income_from_pesactivity.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/activity_login_page.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_login_page.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.11" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/autocompletetext.xml" value="0.125" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragement_income_from_hp.xml" value="0.21" />
-        <entry key="app/src/main/res/layout/fragment_calculator.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_calculator.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_declaration.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_deductions.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_employee_details.xml" value="0.2" />
@@ -84,7 +85,7 @@
         <entry key="app/src/main/res/layout/fragment_income_from_os.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_income_from_pes.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_investments.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_l_o_pand_s_o.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_l_o_pand_s_o.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_my_profile_change_photo.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_new_regime.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_new_tax_slabs.xml" value="0.125" />

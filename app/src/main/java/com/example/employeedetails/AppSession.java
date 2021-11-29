@@ -4,11 +4,14 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.util.Base64;
 
 import com.example.employeedetails.ModalClasses.User;
+import com.google.gson.Gson;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -28,12 +31,12 @@ public class AppSession {
         this.prefsEditor = sharedPreferences.edit();
         regimeType=sharedPreferences.getString("regimeType",null);
         user=new User();
-        user.setFirst_name("Akula ");
-        user.setLast_name("Ravi Teja");
-        user.setCompanyName("Ascent consulting");
+//        user.setFirst_name("Akula ");
+//        user.setLast_name("Ravi Teja");
+//        user.setCompanyName("Ascent consulting");
     }
     public String getUserName(){
-        return sharedPreferences.getString("username",null);
+        return getUser().getUsername();
     }
     public String getUserPassword(){
         return sharedPreferences.getString("userPassword",null);
@@ -42,6 +45,7 @@ public class AppSession {
         prefsEditor.putString("username",null).commit();
         prefsEditor.putString("userPassword",null).commit();
         prefsEditor.putString("regimeType",null).commit();
+        prefsEditor.putString("currentUser",null).commit();
     }
     public void setUserName(String name){
         prefsEditor.putString("username",name).commit();
@@ -88,6 +92,19 @@ public class AppSession {
     }
 
     public User getUser() {
-        return user;
+        Gson gson=new Gson();
+        return gson.fromJson(sharedPreferences.getString("currentUser",gson.toJson(new User())),User.class);
+    }
+    public void setUser(User users){
+        Gson gson=new Gson();
+        System.out.println(users.getCompanyName());
+        prefsEditor.putString("currentUser",gson.toJson(users)).commit();
+
+    }
+    public static boolean isNetworkAvailable(Context context) {
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        boolean isConnected = activeNetwork != null && activeNetwork.isConnected();
+        return isConnected;
     }
 }

@@ -64,7 +64,8 @@
 
            android:text="Submit"
            android:textSize="13sp"
-           android:textStyle="bold" />
+           android:textStyle="bold"
+           android:textColor="@color/white"/>
 
        <TextView
            android:id="@+id/declarationError"
