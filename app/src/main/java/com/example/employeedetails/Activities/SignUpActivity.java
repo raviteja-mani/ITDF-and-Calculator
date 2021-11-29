@@ -81,8 +81,6 @@ DatabaseReference reference= database.getReference().child("Users");
     }
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-
     }
     public void saveTheData(String username,String companyname,String email,String password){
         FirebaseUser user = auth.getCurrentUser();

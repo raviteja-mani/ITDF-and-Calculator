@@ -21,6 +21,11 @@
         <item name="cornerSize">50%</item>
     </style>
 <style name="underline">
-    <item name="android:textAppearance"></item>
+
 </style>
+    <style name="letoutItems">
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+
+    </style>
 </resources>

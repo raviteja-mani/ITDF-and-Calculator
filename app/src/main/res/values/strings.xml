@@ -122,6 +122,19 @@
     <string name="coapplicant_text2">Co Applicant Name 1</string>
     <string name="coapplicant_text3">Co Applicant Name 2</string>
     <string name="noInternet">Please check your Internet Connection</string>
+    <string name="letout_property_txt1">Is the Property Joint Property ?</string>
+    <string name="letout_property_heading_txt2">"What is the percentage of your contribution towards repayment of Loan. "</string>
+    <string name="letout_property_heading_txt1">Particulars</string>
+    <string name="letout_property_heading_txt3">Property -1</string>
+    <string name="letout_property_heading_txt4">Property - II</string>
+    <string name="rentRecieved_letout">1) Rent recieved</string>
+    <string name="municipaltaxes_letout">2) Less Municipal taxes actually paid - (2021-22)</string>
+    <string name="letout_netannualValue">3) Net annual value (1-2)</string>
+    <string name="letout_lstd30per">4) Less Standard Deduction (30% of NAV)</string>
+    <string name="interestRepayment_letout">5) Interest Repayment in the current year</string>
+    <string name="preemi_letout">6) Pre EMI paid if any in the current year other than regular interest repayment</string>
+    <string name="letout_preemi1">7) Pre EMI - year I</string>
+    <string name="letout_preemi2">8) Pre EMI -II</string>
     <string-array name="programming_languages">
         <item>Yes</item>
         <item>No</item>

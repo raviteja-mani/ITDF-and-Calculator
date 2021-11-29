@@ -52,6 +52,15 @@ LinearLayout letout_drawer;
 
             }
         });
+        letout_drawer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(self_occupied_hide.getVisibility()==View.VISIBLE) self_occupied_hide.setVisibility(View.GONE);
+                if(letout_hideout.getVisibility()==View.GONE) letout_hideout.setVisibility(View.VISIBLE);
+                if(coapplicant_hideout.getVisibility()==View.VISIBLE) coapplicant_hideout.setVisibility(View.GONE);
+
+            }
+        });
         return v;
     }
 }

@@ -11,7 +11,7 @@ import com.example.employeedetails.HRARepository;
 import com.example.employeedetails.ModalClasses.HRAItem;
 
 import java.util.List;
-
+//unused class
 public class HRAviewModel extends AndroidViewModel {
     private HRARepository repository;
     private final LiveData<List<HRAItem>> HRAall;

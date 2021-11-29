@@ -53,8 +53,6 @@ public class Login_page extends AppCompatActivity {
         setContentView(R.layout.activity_login_page);
         loginpage=findViewById(R.id.loginpage);
         progressBar=findViewById(R.id.progressBar);
-// ...
-// Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
         if (!isNetworkAvailable(this)) {
             showSnackbar(getResources().getString(R.string.noInternet),loginpage);
@@ -71,27 +69,14 @@ public class Login_page extends AppCompatActivity {
         password=findViewById(R.id.password_edit_text);
         error=findViewById(R.id.loginerror);
         session=new AppSession(this.getApplicationContext());
-//        getSupportActionBar().setTitle("Login Please");
         loginBtn=findViewById(R.id.Loginbutton);
         getSupportActionBar().setTitle("Please Login");
-//        getSupportActionBar().setLogo(R.drawable.stohrm_logo);
+
         loginBtn.setOnClickListener(view -> {
             progressBar.setVisibility(View.VISIBLE);
             if(authenticate(String.valueOf(username.getText()),String.valueOf(password.getText())))
             signin(String.valueOf(username.getText()),String.valueOf(password.getText()));
-//            getUserData();
-//            if(String.valueOf(username.getText()).equals("raviteja")&&String.valueOf(password.getText()).equals("raviteja"))
-//            {
-//                Intent i = new Intent(this, MainActivity.class);
-//                session.setUserName(String.valueOf(username.getText()));
-//                session.setUserPassword(String.valueOf(password.getText()));
-//                startActivity(i);
-//                error.setVisibility(View.INVISIBLE);
-//                finish();
-//            }
-//            else{
-//                error.setVisibility(View.VISIBLE);
-//            }
+
         });
     }
     public boolean authenticate(String email,String pass){

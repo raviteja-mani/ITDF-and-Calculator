@@ -20,8 +20,8 @@ public class Splash_screen extends AppCompatActivity {
         image=findViewById(R.id.imageView);
 //        progress=findViewById(R.id.progressBar);
         new Handler().postDelayed((Runnable) () -> {
-            AppSession session=new AppSession(this);
-            if(session.getUserName()!=null)
+            AppSession session=new AppSession(this.getApplicationContext());
+            if(session.getUser()!=null)
             {
                 Intent i = new Intent(this, MainActivity.class);
                 startActivity(i);
