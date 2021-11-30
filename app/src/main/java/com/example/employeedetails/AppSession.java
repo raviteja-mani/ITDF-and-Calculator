@@ -101,6 +101,9 @@ public class AppSession {
         prefsEditor.putString("currentUser",gson.toJson(users)).commit();
 
     }
+    public boolean isLoggedIn(){
+        return sharedPreferences.getString("currentUser",null)==null?false:true;
+    }
     public static boolean isNetworkAvailable(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();

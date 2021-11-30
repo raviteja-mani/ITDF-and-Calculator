@@ -135,6 +135,7 @@
     <string name="preemi_letout">6) Pre EMI paid if any in the current year other than regular interest repayment</string>
     <string name="letout_preemi1">7) Pre EMI - year I</string>
     <string name="letout_preemi2">8) Pre EMI -II</string>
+    <string name="poweredBy">Powered by: <a href="http://www.ascent-online.com/">StoHRM</a>&#8482;</string>
     <string-array name="programming_languages">
         <item>Yes</item>
         <item>No</item>

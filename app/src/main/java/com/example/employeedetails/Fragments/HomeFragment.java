@@ -150,9 +150,7 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemClickLis
 
             }
         });
-//        System.out.println(user1.getCompanyName());
-//Log.d("tag1",user1.getUsername());
-//Log.d("tag2",user1.getCompanyName());
+
         session.setUser(user1);
 //        reference.child("password").setValue(password);
     }

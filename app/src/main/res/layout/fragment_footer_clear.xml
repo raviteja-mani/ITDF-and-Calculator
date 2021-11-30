@@ -1,0 +1,22 @@
+<!-- Footer aligned to bottom -->
+<LinearLayout
+    android:id="@+id/footer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_alignParentBottom="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:background="@color/white"
+        android:id="@+id/txtPowered"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:padding="2dp"
+        android:textSize="10sp"
+        android:text="@string/poweredBy"/>
+</LinearLayout>
+

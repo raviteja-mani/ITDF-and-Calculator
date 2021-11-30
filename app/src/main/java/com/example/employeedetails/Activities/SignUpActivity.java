@@ -23,6 +23,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -45,6 +46,7 @@ DatabaseReference reference= database.getReference().child("Users");
 // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_sign_up);
+        setTitle("Please SignUp");
         error=findViewById(R.id.signuperror);
         session=new AppSession(getApplicationContext());
         companyname=findViewById(R.id.companyname);
@@ -78,6 +80,10 @@ DatabaseReference reference= database.getReference().child("Users");
                         }
                     }
                 });
+//        userFirebaseUser user = auth.getCurrentUser();
+//        UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+//                .setDisplayName("Jane Q. Us
+
     }
     public void onStart() {
         super.onStart();
