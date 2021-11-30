@@ -5,9 +5,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,15 +69,7 @@ public class IncomeFragment extends Fragment {
 
             }
         });
-//        Log.d("k","hellooo");
-//        System.out.println(incomeHPLetOut.getText()+"kjfndslkf");
-//        incomeHPLetOut.addTextChangedListener(this);
-//        incomeHPselfoccupied.addTextChangedListener(this);
-//        incomeHPotherincome.addTextChangedListener(this);
-//        incomePEsalary.addTextChangedListener(this);
-//        incomePErecovered.addTextChangedListener(this);
-//        incomePEprovidentfund.addTextChangedListener(this);
-//        incomePEtaxpaidoutside.addTextChangedListener(this);
+
         return v;
     }
 }

@@ -31,7 +31,6 @@ public class HRADisplayFragment extends Fragment {
     EditText amount;
     HRAviewModel viewModel;
     Spinner spinner;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -59,16 +58,10 @@ public class HRADisplayFragment extends Fragment {
             spinner.setSelection(0);
         else spinner.setSelection(1);
         amount.setText(String.valueOf(item.getAmount()));
-
-
         viewModel= ViewModelProviders.of(this).get(HRAviewModel.class);
-
-
         Updatebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 item.setMonth(String.valueOf(month.getText()));
                 item.setLandlordname(String.valueOf(name.getText()));
                 item.setPancard(String.valueOf(panncard.getText()));
@@ -83,7 +76,6 @@ public class HRADisplayFragment extends Fragment {
         deletebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 FragmentManager manager=getActivity().getSupportFragmentManager();
                 manager.popBackStack();
             }

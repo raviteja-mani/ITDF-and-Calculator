@@ -35,9 +35,5 @@ public class HRARepository {
             hraDao.update(item);
         });
     }
-//    public void deleteAll(){
-//        MainDatabase.databaseWriteExecutor.execute(()->{
-//                hraDao.deleteAll();
-//    });
-//    }
+
 }

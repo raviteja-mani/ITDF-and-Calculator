@@ -31,8 +31,7 @@ public class MySession {
     Generalfunctions funcs;
     public MySession(Context context) {
         sharedprefs=context.getSharedPreferences("employeeDetails", AppCompatActivity.MODE_PRIVATE);
-         funcs=new Generalfunctions(context);
-
+        funcs=new Generalfunctions(context);
         exemptions=funcs.getExemptions();
 
     }

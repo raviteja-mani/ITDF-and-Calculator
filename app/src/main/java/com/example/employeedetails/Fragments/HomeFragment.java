@@ -47,6 +47,7 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemClickLis
     TextView txtFullName;
     TextView txtCompany;
     private FirebaseAuth mAuth;
+    User user1;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -60,6 +61,7 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemClickLis
         txtFullName=rootView.findViewById(R.id.txtFullName);
         txtCompany=rootView.findViewById(R.id.txtCompany);
         session=new AppSession(getActivity().getApplicationContext());
+
         getUserData();
         imageView.setImageBitmap(session.getProfileBitmap());
 //        User user= session.getUser();
@@ -98,7 +100,7 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemClickLis
             selectedGridItem = selectedItem.getTitle();
             ((OnGridviewItemSelectedListener) getActivity()).onGridviewItemPicked(selectedGridItem);
         } catch (ClassCastException cce) {
-            //todo
+
         }
     }
 
@@ -108,7 +110,7 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemClickLis
     public void getUserData(){
         FirebaseDatabase database=FirebaseDatabase.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
-        User user1=new User();
+        user1=new User();
         DatabaseReference reference=database.getReference("Users").child(user.getUid());
         System.out.println(user.getUid());
 //System.out.println(reference.child("companyname").getValue().toString());
@@ -117,6 +119,7 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemClickLis
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 user1.setCompanyName(snapshot.getValue().toString());
                 txtCompany.setText(user1.getCompanyName());
+                session.setUser(user1);
 //                error.setVisibility(View.VISIBLE);
 //                error.setText(snapshot.getValue().toString());
             }
@@ -131,6 +134,7 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemClickLis
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 user1.setEmail(snapshot.getValue(String.class));
+                session.setUser(user1);
             }
 
             @Override
@@ -143,6 +147,7 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemClickLis
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 user1.setUsername(snapshot.getValue(String.class));
                 txtFullName.setText(user1.getUsername());
+                session.setUser(user1);
             }
 
             @Override
@@ -150,7 +155,32 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemClickLis
 
             }
         });
+        reference.child("employeecode").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                user1.setUserId(Integer.parseInt(snapshot.getValue(String.class)));
+                session.setUser(user1);
+//                txtFullName.setText(user1.getUsername());
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        reference.child("designation").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                user1.setDesignation(snapshot.getValue(String.class));
+                session.setUser(user1);
+//                txtFullName.setText(user1.getUsername());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         session.setUser(user1);
 //        reference.child("password").setValue(password);
     }

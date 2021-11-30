@@ -86,6 +86,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/empid"
                     android:layout_weight=".5"
                     android:gravity="start"
                     android:text="11262"
@@ -103,6 +104,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/empname"
                     android:layout_weight=".5"
 
                     android:text="Akula Tarak Mani Ravi Teja"
@@ -110,19 +112,22 @@
                     />
             </TableRow>
 
-            <TableRow android:layout_margin="5dp">
+            <TableRow android:layout_margin="5dp"
+                android:gravity="center_vertical">
 
                 <TextView
                     android:layout_weight=".5"
 
                     android:paddingLeft="20dp"
-                    android:text="Date Of Birth "
+                    android:paddingRight="10dp"
+                    android:text="Current working company"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/company"
                     android:layout_weight=".5"
 
-                    android:text="21/07/1999"
+                    android:text="none"
 
                     />
             </TableRow>
@@ -131,15 +136,15 @@
 
                 <TextView
                     android:layout_weight=".5"
-
                     android:paddingLeft="20dp"
-                    android:text="Date Of Joining "
+                    android:text="Registered mail"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/email"
                     android:layout_weight=".5"
 
-                    android:text="23/08/2021"
+                    android:text="null"
 
                     />
             </TableRow>
@@ -153,6 +158,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/designationED"
                     android:layout_weight=".5"
                     android:text="Intern" />
             </TableRow>

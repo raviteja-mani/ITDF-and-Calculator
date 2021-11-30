@@ -125,53 +125,5 @@ public class Login_page extends AppCompatActivity {
             // Catch exception here
         }
     }
-//    public void getUserData(){
-//        FirebaseDatabase database=FirebaseDatabase.getInstance();
-//        FirebaseUser user = mAuth.getCurrentUser();
-//        User user1=session.getUser();
-//        DatabaseReference reference=database.getReference("Users").child(user.getUid());
-//System.out.println(user.getUid());
-////System.out.println(reference.child("companyname").getValue().toString());
-//        reference.child("companyname").addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                user1.setCompanyName(snapshot.getValue().toString());
-//                error.setVisibility(View.VISIBLE);
-//                error.setText(snapshot.getValue().toString());
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-////        bmHgieKAiIOUhpAJaB88mXVup302
-//        reference.child("emailId").addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                user1.setEmail(snapshot.getValue(String.class));
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-//        reference.child("username").addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                user1.setUsername(snapshot.getValue(String.class));
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-////        System.out.println(user1.getCompanyName());
-////Log.d("tag1",user1.getUsername());
-////Log.d("tag2",user1.getCompanyName());
-//        session.setUser(user1);
-////        reference.child("password").setValue(password);
-//    }
+
 }

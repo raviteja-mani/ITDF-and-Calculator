@@ -56,7 +56,6 @@ public class Generalfunctions {
          return a;
     }
     public void setDeductionArray(ArrayList<DeductionType> arr){
-
         Gson gson=new Gson();
         prefsEditor.putString("deductions",gson.toJson(arr));
         prefsEditor.commit();

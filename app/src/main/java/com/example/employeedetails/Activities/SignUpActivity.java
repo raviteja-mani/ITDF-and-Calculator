@@ -32,6 +32,8 @@ EditText companyname;
 EditText username;
 EditText emailId;
 EditText password_edit_text;
+EditText designation;
+EditText empno;
 Button signUp;
 TextView error;
 private FirebaseAuth auth;
@@ -53,14 +55,21 @@ DatabaseReference reference= database.getReference().child("Users");
         username=findViewById(R.id.username);
         emailId=findViewById(R.id.emailId);
         password_edit_text=findViewById(R.id.password_edit_text);
+        designation=findViewById(R.id.designation);
+        empno=findViewById(R.id.employeecode);
         signUp=findViewById(R.id.SignUpbutton);
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(!authenticateValue())
                 signup(String.valueOf(emailId.getText()),String.valueOf(password_edit_text.getText()));
 
             }
         });
+    }
+    public boolean authenticateValue(){
+        if(!String.valueOf(emailId.getText()).equals("")||!String.valueOf(password_edit_text.getText()).equals("")||!String.valueOf(companyname.getText()).equals("")||!String.valueOf(username.getText()).equals("")||!String.valueOf(empno.getText()).equals("")||!String.valueOf(designation.getText()).equals("")) return false;
+        return true;
     }
     public void signup(String email,String passward){
 
@@ -69,7 +78,7 @@ DatabaseReference reference= database.getReference().child("Users");
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            saveTheData(String.valueOf(username.getText()),String.valueOf(companyname.getText()),String.valueOf(emailId.getText()),String.valueOf(password_edit_text.getText()));
+                            saveTheData(String.valueOf(username.getText()),String.valueOf(companyname.getText()),String.valueOf(emailId.getText()),String.valueOf(password_edit_text.getText()),String.valueOf(empno.getText()),String.valueOf(designation.getText()));
                             // Sign in success, update UI with the signed-in user's information
                             Intent i =new Intent(SignUpActivity.this,Login_page.class);
                             startActivity(i);
@@ -88,7 +97,7 @@ DatabaseReference reference= database.getReference().child("Users");
     public void onStart() {
         super.onStart();
     }
-    public void saveTheData(String username,String companyname,String email,String password){
+    public void saveTheData(String username,String companyname,String email,String password,String empcode,String designation){
         FirebaseUser user = auth.getCurrentUser();
         FirebaseDatabase database=FirebaseDatabase.getInstance();
         DatabaseReference reference=database.getReference().child("Users").child(user.getUid());
@@ -96,5 +105,7 @@ DatabaseReference reference= database.getReference().child("Users");
         reference.child("emailId").setValue(email);
         reference.child("password").setValue(password);
         reference.child("username").setValue(username);
+        reference.child("employeecode").setValue(empcode);
+        reference.child("designation").setValue(designation);
     }
 }
