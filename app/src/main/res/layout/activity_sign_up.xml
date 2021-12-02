@@ -8,6 +8,7 @@
         tools:context=".Activities.SignUpActivity">
 
         <LinearLayout
+            android:id="@+id/signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
@@ -155,7 +156,14 @@
             </RelativeLayout>
 
 
-
+            <ProgressBar
+                android:id="@+id/signupprogressBar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"
+                />
             <TextView
                 android:id="@+id/signuperror"
                 android:layout_width="wrap_content"

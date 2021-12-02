@@ -297,14 +297,15 @@
             </TableRow>
 
         </TableLayout>
+
         <Button
             android:id="@+id/okbutton"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="Ok"
+            android:layout_height="33dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            />
+            android:textColor="@color/white"
+            android:text="Ok" />
     </LinearLayout>
 </ScrollView>

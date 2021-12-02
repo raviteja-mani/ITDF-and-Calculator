@@ -1,11 +1,16 @@
 package com.example.employeedetails.Activities;
 
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -29,6 +34,7 @@ import com.example.employeedetails.Fragments.ITDF.OldRegimeFragment;
 import com.example.employeedetails.Fragments.NewTaxSlabsFragment;
 import com.example.employeedetails.Fragments.SettingsFragment;
 import com.example.employeedetails.Fragments.SlabsFragment;
+//import com.example.employeedetails.Networkservice;
 import com.example.employeedetails.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -37,33 +43,28 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity   implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.OnGridviewItemSelectedListener {
+public class MainActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.OnGridviewItemSelectedListener {
     private DrawerLayout drawer;
     private ActionBarDrawerToggle t;
     private NavigationView navigationView;
     AppSession session;
 
+//    public static final String BROADCAST = "checkinternet";
+//    IntentFilter intentFilter;
     FragmentManager fragmentManager=getSupportFragmentManager();
-//    private GuideLinesFragment guideLinesFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         session=new AppSession(this);
-//        Log.d(TAG, String.valueOf(R.string.close));
+
         Toolbar toolbar = findViewById(R.id.toolbar);
-//        toolbar.setLogo(R.drawable.stohrm_logo);
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
 fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frameLayoutContainer,new HomeFragment()).commit();
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+
 
         drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -73,7 +74,14 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
 
         navigationView = (NavigationView)findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
+//        intentFilter = new IntentFilter();
+//        intentFilter.addAction(BROADCAST);
+//        Intent serviceIntent = new Intent(this,Networkservice.class);
+//        startService(serviceIntent);
+//        if (Networkservice.isOnline(getApplicationContext())){
+//            Toast.makeText(getApplicationContext(),"true",Toast.LENGTH_SHORT).show();
+//        }else
+//            Toast.makeText(getApplicationContext(),"false",Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -167,12 +175,13 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
     }
 
     @Override
-    protected void onResume() {
+    protected void onResume(){
         super.onResume();
+//        registerReceiver(broadcastReceiver,intentFilter);
         List<Fragment> list= getSupportFragmentManager().getFragments();
         getSupportFragmentManager().beginTransaction().replace(R.id.frameLayoutContainer,list.get(list.size()-1)).commit();
     }
-    private void showPopup() {
+    private void showPopup(){
         AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
         alert.setMessage("Are you sure?")
                 .setPositiveButton("Logout", new DialogInterface.OnClickListener(){
@@ -212,4 +221,7 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
             break;
     }
     }
+
+
+
 }
