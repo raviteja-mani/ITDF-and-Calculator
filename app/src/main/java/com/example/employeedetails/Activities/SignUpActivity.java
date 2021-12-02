@@ -44,8 +44,6 @@ DatabaseReference reference= database.getReference().child("Users");
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-// ...
-// Initialize Firebase Auth
         auth = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_sign_up);
         setTitle("Please SignUp");

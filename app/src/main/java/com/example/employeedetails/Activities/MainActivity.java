@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,7 +30,10 @@ import com.example.employeedetails.Fragments.NewTaxSlabsFragment;
 import com.example.employeedetails.Fragments.SettingsFragment;
 import com.example.employeedetails.Fragments.SlabsFragment;
 import com.example.employeedetails.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.List;
 
@@ -136,6 +140,7 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
 //                Toast.makeText(MainActivity.this, "In Employee details",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.Home:
+
                 fragment=new HomeFragment();
                 break;
             case R.id.profile:
@@ -183,8 +188,15 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
 
     private void logout() {
         session.logOut();
+
+//        .getInstance().signOut(this).addOnComplete();
+
+
+
         Intent i=new Intent(this,Login_page.class);
         startActivity(i);
+//        FirebaseAuth.getInstance()
+//                .signOut();
         finish();
     }
 

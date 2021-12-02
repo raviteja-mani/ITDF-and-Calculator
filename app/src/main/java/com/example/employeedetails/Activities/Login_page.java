@@ -12,6 +12,7 @@ import android.os.Bundle;
 
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -74,6 +75,7 @@ public class Login_page extends AppCompatActivity {
 
         loginBtn.setOnClickListener(view -> {
             progressBar.setVisibility(View.VISIBLE);
+            hideKeyboard(view);
             if(authenticate(String.valueOf(username.getText()),String.valueOf(password.getText())))
             signin(String.valueOf(username.getText()),String.valueOf(password.getText()));
 
@@ -125,5 +127,12 @@ public class Login_page extends AppCompatActivity {
             // Catch exception here
         }
     }
+    public void hideKeyboard(View view) {
+        try {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        } catch(Exception ignored) {
 
+        }
+    }
 }
