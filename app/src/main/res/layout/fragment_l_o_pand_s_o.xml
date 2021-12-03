@@ -1,619 +1,712 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.ITDF.LOPandSO">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-    <LinearLayout
-        android:id="@+id/self_occupied_drawer"
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="@string/selfOccupied_property_heading"
-            android:textColor="@color/white"
-            android:background="@color/blue"/>
-    </LinearLayout>
-    <LinearLayout
-            android:id="@+id/self_occupied_hide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="4dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_weight=".6"
-                android:layout_marginRight="15dp"
-                android:text="@string/selfOccupied_text1"
-               />
-            <Spinner
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner_is_paying_Interest"/>
 
-        </LinearLayout>
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="4dp"
-        android:gravity="center_vertical">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_weight=".6"
-                android:layout_marginRight="15dp"
-                android:text="@string/selfOccupied_text2"
-                />
-            <Spinner
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner_is_joint_property"/>
-        </LinearLayout>
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="4dp"
-        android:gravity="center_vertical">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_weight=".6"
-                android:layout_marginRight="15dp"
-                android:text="@string/selfOccupied_text3"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="35dp"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"/>
-
-        </LinearLayout>
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="4dp"
-        android:gravity="center_vertical">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_weight=".6"
-                android:layout_marginRight="15dp"
-                android:text="@string/selfOccupied_text4"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="35dp"
-                android:paddingLeft="4dp"
-                android:background="@drawable/edittext_border"/>
-
-        </LinearLayout>
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="4dp"
-            android:gravity="center_vertical">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_weight=".6"
-                android:layout_marginRight="15dp"
-                android:text="@string/selfOccupied_text5"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="35dp"
-                android:paddingLeft="4dp"
-                android:background="@drawable/edittext_border"/>
-
-        </LinearLayout>
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="4dp"
-            android:gravity="center_vertical">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_weight=".6"
-                android:layout_marginRight="15dp"
-                android:text="@string/selfOccupied_text6"/>
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="35dp"
-                android:paddingLeft="4dp"
-                android:background="@drawable/edittext_border"/>
-
-        </LinearLayout>
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="4dp"
-            android:gravity="center_vertical">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_weight=".6"
-                android:layout_marginRight="15dp"
-                android:text="@string/selfOccupied_text7"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="35dp"
-                android:paddingLeft="4dp"
-                android:background="@drawable/edittext_border"/>
-
-        </LinearLayout>
-        </LinearLayout>
-</LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:id="@+id/coapplicant_drawer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="@string/co_applicant_declaration_heading"
-                android:textColor="@color/white"
-                android:background="@color/blue"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/coapplicant_hideout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="4dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_weight=".6"
-                android:layout_marginRight="15dp"
-                android:text="@string/coapplicant_text1"
-                />
-            <Spinner
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner_is_there_coapplicant"/>
+                android:orientation="vertical">
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="4dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_weight=".6"
-                android:layout_marginRight="15dp"
+                <LinearLayout
+                    android:id="@+id/self_occupied_drawer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-               android:text="@string/coapplicant_text2" />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="35dp"
-                android:paddingLeft="4dp"
-                android:background="@drawable/edittext_border"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/blue"
+                        android:padding="10dp"
+                        android:text="@string/selfOccupied_property_heading"
+                        android:textColor="@color/white" />
+                </LinearLayout>
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="4dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:layout_weight=".6"
-                android:layout_marginRight="15dp"
-                android:text="@string/coapplicant_text3"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="35dp"
-                android:paddingLeft="4dp"
-                android:background="@drawable/edittext_border"/>
+                <LinearLayout
+                    android:id="@+id/self_occupied_hide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-        </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <LinearLayout
-            android:id="@+id/letout_drawer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight=".6"
+                            android:padding="10dp"
+                            android:text="@string/selfOccupied_text1" />
+
+                        <Spinner
+                            android:id="@+id/spinner_is_paying_Interest"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight=".6"
+                            android:padding="10dp"
+                            android:text="@string/selfOccupied_text2" />
+
+                        <Spinner
+                            android:id="@+id/spinner_is_joint_property"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight=".6"
+                            android:padding="10dp"
+                            android:text="@string/selfOccupied_text3" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight=".4"
+                            android:background="@drawable/edittext_border"
+                            android:paddingLeft="3dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight=".6"
+                            android:padding="10dp"
+                            android:text="@string/selfOccupied_text4" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight=".4"
+                            android:background="@drawable/edittext_border"
+                            android:paddingLeft="4dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight=".6"
+                            android:padding="10dp"
+                            android:text="@string/selfOccupied_text5" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight=".4"
+                            android:background="@drawable/edittext_border"
+                            android:paddingLeft="4dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight=".6"
+                            android:padding="10dp"
+                            android:text="@string/selfOccupied_text6" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight=".4"
+                            android:background="@drawable/edittext_border"
+                            android:paddingLeft="4dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight=".6"
+                            android:padding="10dp"
+                            android:text="@string/selfOccupied_text7" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight=".4"
+                            android:background="@drawable/edittext_border"
+                            android:paddingLeft="4dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="@string/letout_property_heading"
-                android:textColor="@color/white"
-                android:background="@color/blue"/>
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/coapplicant_drawer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/blue"
+                        android:padding="10dp"
+                        android:text="@string/co_applicant_declaration_heading"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/coapplicant_hideout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight=".6"
+                            android:padding="10dp"
+                            android:text="@string/coapplicant_text1" />
+
+                        <Spinner
+                            android:id="@+id/spinner_is_there_coapplicant"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight=".6"
+                            android:padding="10dp"
+
+                            android:text="@string/coapplicant_text2" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight=".4"
+                            android:background="@drawable/edittext_border"
+                            android:paddingLeft="4dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight=".6"
+                            android:padding="10dp"
+                            android:text="@string/coapplicant_text3" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight=".4"
+                            android:background="@drawable/edittext_border"
+                            android:paddingLeft="4dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/letout_drawer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/blue"
+                        android:padding="10dp"
+                        android:text="@string/letout_property_heading"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/letout_hideout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="7dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:text="@string/letout_property_heading_txt1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".3"
+                            android:text="@string/letout_property_heading_txt3" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".3"
+                            android:text="@string/letout_property_heading_txt4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:text="@string/letout_property_txt1" />
+
+                        <Spinner
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".3" />
+
+                        <Spinner
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:text="@string/letout_property_heading_txt2" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:text="@string/rentRecieved_letout" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:text="@string/municipaltaxes_letout" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:text="@string/letout_netannualValue" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp"
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:text="@string/letout_lstd30per" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:text="@string/interestRepayment_letout" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:text="@string/preemi_letout" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:text="@string/letout_preemi1" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:text="@string/letout_preemi2" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+
+                        <EditText
+                            style="@style/letoutItems"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/edittext_border"
+                            android:inputType="number"
+                            android:paddingLeft="3dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
         </LinearLayout>
+    </ScrollView>
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="7dp"
-        android:id="@+id/letout_hideout"
-        android:visibility="gone">
-        <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-            android:padding="3dp"
-            android:layout_marginBottom="5dp">
-    <TextView
-        android:layout_width="0dp"
-        android:layout_weight=".4"
-        android:layout_height="wrap_content"
-       android:text="@string/letout_property_heading_txt1"
-        />
-    <TextView
-        android:layout_width="0dp"
-        android:layout_weight=".3"
-        android:layout_height="wrap_content"
-        android:text="@string/letout_property_heading_txt3"
-        />
-    <TextView
-        android:layout_width="0dp"
-        android:layout_weight=".3"
-        android:layout_height="wrap_content"
-        android:text="@string/letout_property_heading_txt4"
-        />
-</LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="wrap_content"
-                android:text="@string/letout_property_txt1"
-                />
-            <Spinner
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                android:layout_height="wrap_content"
-               android:layout_marginLeft="5dp" />
-            <Spinner
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                android:layout_height="wrap_content"
-               android:layout_marginLeft="5dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="wrap_content"
-                 android:text="@string/letout_property_heading_txt2"/>
-            <EditText
-                style="@style/letoutItems"
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-            <EditText
-                style="@style/letoutItems"
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="wrap_content"
-                android:text="@string/rentRecieved_letout"
-                />
-            <EditText
-                style="@style/letoutItems"
-                android:layout_width="0dp"
-                android:layout_weight=".3"
+        android:layout_gravity="fill_vertical"
+        android:background="@color/blue"
 
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-            <EditText
-                style="@style/letoutItems"
-                android:layout_width="0dp"
-                android:layout_weight=".3"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="wrap_content"
-                android:text="@string/municipaltaxes_letout"
-                />
-            <EditText
-                style="@style/letoutItems"
-                android:layout_width="0dp"
-                android:layout_weight=".3"
+        <Button
+            android:id="@+id/PESsaveBtn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/submit"
+            android:textColor="@color/white" />
 
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-            <EditText
-                style="@style/letoutItems"
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="wrap_content"
-                android:text="@string/letout_netannualValue"
-                />
-            <EditText
-                style="@style/letoutItems"
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-            <EditText
-                style="@style/letoutItems"
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="wrap_content"
-                android:text="@string/letout_lstd30per"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                style="@style/letoutItems"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                style="@style/letoutItems"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="wrap_content"
-                android:text="@string/interestRepayment_letout"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                style="@style/letoutItems"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                style="@style/letoutItems"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="wrap_content"
-                android:text="@string/preemi_letout"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                style="@style/letoutItems"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                style="@style/letoutItems"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="wrap_content"
-                android:text="@string/letout_preemi1"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                style="@style/letoutItems"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                style="@style/letoutItems"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight=".4"
-                android:layout_height="wrap_content"
-                android:text="@string/letout_preemi2"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                style="@style/letoutItems"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_weight=".3"
-                style="@style/letoutItems"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="3dp"
-                android:inputType="number"
-                android:layout_marginLeft="5dp"
-                />
-        </LinearLayout>
-
+        <Button
+            android:id="@+id/lopback"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:text="@string/back"
+            android:textColor="@color/white" />
     </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

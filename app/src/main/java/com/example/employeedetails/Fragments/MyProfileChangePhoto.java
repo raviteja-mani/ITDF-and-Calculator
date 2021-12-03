@@ -65,7 +65,6 @@ public class MyProfileChangePhoto extends DialogFragment implements View.OnClick
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_my_profile_change_photo, container, false);
-
         idAddForm = (LinearLayout) rootView.findViewById(R.id.ltMainContainer);
         idImagePicker = (RelativeLayout) rootView.findViewById(R.id.idImagePicker);
         Button btnChangePhoto = (Button) rootView.findViewById(R.id.btnChangePhoto);

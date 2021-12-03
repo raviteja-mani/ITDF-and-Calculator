@@ -31,9 +31,7 @@ public class AppSession {
         this.prefsEditor = sharedPreferences.edit();
         regimeType=sharedPreferences.getString("regimeType",null);
         user=new User();
-//        user.setFirst_name("Akula ");
-//        user.setLast_name("Ravi Teja");
-//        user.setCompanyName("Ascent consulting");
+
     }
     public String getUserName(){
         return getUser().getUsername();

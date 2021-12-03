@@ -222,6 +222,4 @@ fragmentManager.beginTransaction().addToBackStack("firstOne").replace(R.id.frame
     }
     }
 
-
-
 }

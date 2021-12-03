@@ -118,7 +118,8 @@
             android:layout_marginStart="197dp"
             android:layout_marginRight="107dp"
             android:layout_marginBottom="1dp"
-            android:text="save" />
+            android:text="save"
+            android:textColor="@color/white"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/cancel_button"
@@ -131,7 +132,8 @@
             android:layout_marginStart="84dp"
             android:layout_marginRight="215dp"
             android:layout_marginBottom="1dp"
-            android:text="Cancel" />
+            android:text="Cancel"
+            android:textColor="@color/white"/>
 
     </RelativeLayout>
 

@@ -5,6 +5,7 @@ import static android.content.ContentValues.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,6 +13,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -47,15 +49,16 @@ Button signUp;
 TextView error;
 private FirebaseAuth auth;
 AppSession session;
-    ProgressBar signupprogressBar;
+ProgressBar signupprogressBar;
 FirebaseDatabase database=FirebaseDatabase.getInstance();
 DatabaseReference reference= database.getReference().child("Users");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        signupprogressBar=findViewById(R.id.signupprogressBar);
+
         auth = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_sign_up);
+        signupprogressBar=findViewById(R.id.signupprogressBar);
         setTitle("Please SignUp");
         error=findViewById(R.id.signuperror);
         session=new AppSession(getApplicationContext());
@@ -67,6 +70,16 @@ DatabaseReference reference= database.getReference().child("Users");
         empno=findViewById(R.id.employeecode);
         signUp=findViewById(R.id.SignUpbutton);
         signup=findViewById(R.id.signup);
+        signup.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                InputMethodManager imm = (InputMethodManager) getSystemService(
+                        Activity.INPUT_METHOD_SERVICE);
+                imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+                int action = event.getActionMasked();
+                return true;
+            }
+        });
         if (!isNetworkAvailable(this)) {
             showSnackbar(getResources().getString(R.string.noInternet),signup);
         }
@@ -78,6 +91,7 @@ DatabaseReference reference= database.getReference().child("Users");
                 if(!authenticateValue())
                 signup(String.valueOf(emailId.getText()),String.valueOf(password_edit_text.getText()));
                 else{
+                    error.setVisibility(View.VISIBLE);
                     error.setText("Please enter the valid values!");
                     signupprogressBar.setVisibility(View.GONE);
                 }

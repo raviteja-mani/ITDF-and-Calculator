@@ -57,7 +57,6 @@ public class ExeptionUS10Fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String val="";
-
                 if(Integer.parseInt(String.valueOf(spinner.getSelectedItemPosition()))==1)
                 val="yes";
                 else val="No";
@@ -78,5 +77,4 @@ public class ExeptionUS10Fragment extends Fragment {
         });
         return v;
     }
-
 }

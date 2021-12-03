@@ -3,18 +3,21 @@ package com.example.employeedetails.Activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import com.example.employeedetails.AppSession;
 import com.example.employeedetails.R;
@@ -26,6 +29,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 
 public class Login_page extends AppCompatActivity {
+
     LinearLayout loginpage;
     Button loginBtn;
     Button signupbutton;
@@ -39,6 +43,7 @@ public class Login_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
+
         loginpage=findViewById(R.id.loginpage);
         progressBar=findViewById(R.id.progressBar);
         mAuth = FirebaseAuth.getInstance();
@@ -51,6 +56,16 @@ public class Login_page extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i =new Intent(Login_page.this,SignUpActivity.class);
                 startActivity(i);
+            }
+        });
+        loginpage.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                InputMethodManager imm = (InputMethodManager) getSystemService(
+                        Activity.INPUT_METHOD_SERVICE);
+                imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+                int action = event.getActionMasked();
+                return true;
             }
         });
         username=findViewById(R.id.username);

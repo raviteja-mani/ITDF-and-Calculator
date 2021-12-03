@@ -21,7 +21,8 @@
         <activity
             android:name=".Activities.SignUpActivity"
             android:parentActivityName=".Activities.Login_page"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.EmployeeLogin"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -136,6 +136,7 @@
     <string name="letout_preemi1">7) Pre EMI - year I</string>
     <string name="letout_preemi2">8) Pre EMI -II</string>
     <string name="poweredBy">Powered by: <a href="http://www.ascent-online.com/">StoHRM</a>&#8482;</string>
+    <string name="back">Back</string>
     <string-array name="programming_languages">
         <item>Yes</item>
         <item>No</item>
